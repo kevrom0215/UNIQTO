@@ -184,3 +184,15 @@ p{
 .button_sizes_container{
     margin-bottom: 10%;
 }
+input[type=image], select {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+
+
