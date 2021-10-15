@@ -31,6 +31,9 @@ hr {
     width: 70%;
     margin: auto;
     height: 1000px;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .panel-contents {
