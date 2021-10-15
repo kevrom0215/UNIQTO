@@ -1,7 +1,7 @@
 
 <!-- main div -->
 <div class="title">
-    <h1>Shopping Cart</h1>
+    <h1><strong>SHOPPING CART</strong></h1>
 </div>
 <div class="container main">
     <div class="mainWrapper row">
@@ -265,17 +265,17 @@
             </div>
             <div class="row">
                 <div class="prices-section border border-1">
-                    <p>Order Summary 1 Item</p>
+                    <h5 class="num-of-items">Order Summary 1 Item(s)</h5>
                     <div>
                         <table class="price-tables">
                             <tbody>
                                 <tr>
-                                    <td>items-subtotal</td>
+                                    <td>item(s) subtotal</td>
                                     <td><span class="price-results">price</span></td>
                                 </tr>
                                 <tr>
-                                    <td>subtotal</td>
-                                    <td><span class="price-results">price</span></td>
+                                    <td class="bigger-font"><strong>SUBTOTAL</strong></td>
+                                    <td><span class="price-results bigger-font"><strong>PRICE</strong></span></td>
                                 </tr>
                                 <tr>
                                     <td>VAT</td>
@@ -284,8 +284,8 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>order total</th>
-                                    <th class="price-results">total price</th>
+                                    <th class="bigger-font"><strong>ORDER TOTAL</strong></th>
+                                    <th class="price-results bigger-font" >GRAND TOTAL</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -297,7 +297,7 @@
                 <hr>
                 <div class="coupon-section">
                     <span>coupon w/ icon</span>
-                    <i type="button" class="fas fa-chevron-right coupon-button"></i>
+                    <i type="button" class="fas fa-chevron-right coupon-button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                 </div>
                 <hr>
             </div>
@@ -306,15 +306,54 @@
                     <p>Your items will be reserved for the next 30 minutes after the “Checkout” button has been pressed.</p>
                 </div>
                 <div class="info-message col-2">
-                    <i type ="button" class="fas fa-info-circle info-icon"></i>
+                    <i type ="button" class="fas fa-info-circle info-icon" data-bs-toggle="modal" data-bs-target="#exampleModal2"></i>
                 </div>
             </div>
             <div class="row">
                 <div class="checkout-section">
-                    <button class="btn btn-dark checkout-button" type="button">Checkout</button>
-                    <button class="btn btn-primary checkout-button" type="button">Continue Shopping</button>
+                    <button class="btn btn-dark checkout-button" type="button">CHECKOUT</button>
+                    <button class="btn btn-primary checkout-button" type="button">CONTINUE SHOPPING</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong>LOGIN REQUIRED</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please go to the login page.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong></strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Your items will not be reserved in your cart. Your items will be reserved for the next 30 minutes after the Checkout button has been pressed.
+        </div>
+        <div class="modal-footer">
+          </div>
+      </div>
+    </div>
+  </div>
+
+ 
