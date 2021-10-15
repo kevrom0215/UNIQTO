@@ -18,7 +18,7 @@ hr {
 
 .title{
     padding-top: 3rem;
-    padding-bottom: 3rem ;
+    // padding-bottom: 1rem;
     margin: auto;
     width: 65%
 }
@@ -30,9 +30,8 @@ hr {
 .main {
     width: 70%;
     margin: auto;
-    height: 1000px;
-    position:-webkit-sticky;
-    position: sticky;
+    // height: 1000px;
+    // position: sticky;
     top: 0;
 }
 
@@ -81,8 +80,9 @@ hr {
 }
 
 .cart-details{
-    float: right;
+    // float: right;
     height: 600px;
+    z-index: 0;
 }
 
 .price-tables{
@@ -137,7 +137,11 @@ hr {
 }
 
 .space-between {
-    height:50px;
+    height:100px;
+}
+
+.space-between-2 {
+    margin-top:100px;
 }
 
 
