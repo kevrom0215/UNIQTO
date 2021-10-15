@@ -1,0 +1,141 @@
+img {
+    height: initial;
+    max-width: 100%;
+}
+
+dl {
+    margin-bottom: 0% ;
+}
+
+ol {
+    list-style-type: none;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title{
+    padding-top: 3rem;
+    padding-bottom: 3rem ;
+    margin: auto;
+    width: 65%
+}
+
+.title h1 {
+    margin-left:6px;
+}
+
+.main {
+    width: 70%;
+    margin: auto;
+}
+
+.panel-contents {
+    width: 100%;
+}
+
+.content-1 {
+    margin-bottom: 3rem;
+}
+
+.image-section {
+    padding:0;
+}
+
+.pad-left-remove {
+    padding-left: 0;
+}
+
+.pad-right-remove {
+    padding-right: 0;
+}
+
+.cancel-div {
+    padding: 0%;
+}
+
+.cancel-button {
+    float: right;
+    font-size: 2rem;
+}
+
+.form-select {
+    width: 50%;
+}
+
+.prod-subtotal {
+    float: right;
+    text-align: right;
+    padding: 0%;
+}
+
+.checkout {
+    margin: auto, auto, 100px, auto;
+    width: 90%;
+}
+
+.cart-details{
+    float: right;
+    height: 600px;
+}
+
+.price-tables{
+    width: 100%;
+}
+
+.price-results {
+    float: right;
+}
+
+.prices-section {
+    justify-content: center;
+    /* height:500px; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.coupon-button {
+    float:right;
+}
+
+.coupon-section {
+    padding:0;
+}
+
+.checkout-reminder {
+    width:80%;
+    padding: 0;
+}
+
+.info-message {
+    padding:0;
+}
+
+.checkout-section {
+    margin-top:20px;
+    padding:0;
+}
+
+.info-icon {
+    float: right;
+}
+
+.checkout-button {
+    width:100%;
+}
+
+.checkout-section .checkout-button {
+    margin-bottom: 1rem;
+}
+
+.space-between {
+    height:50px;
+}
+
+
+
+

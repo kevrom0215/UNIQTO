@@ -1,0 +1,187 @@
+@import url(https://db.onlinewebfonts.com/c/13bf1d3e6c7119293f9c96e5678096e6?family=Uniqlo+Pro+Light);
+div{
+    display: flex;
+    
+}
+@font-face {font-family: "Uniqlo Pro Light"; src: url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.eot"); src: url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.woff") format("woff"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.svg#Uniqlo Pro Light") format("svg"); }
+.main_div{
+    flex-direction: row;
+    justify-content: center;
+}
+.add_to_cart{
+    width: auto;
+    background-color: #f44336;
+    height: 50px;
+    width: 100%;
+    margin: 0.5em;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.image_container{
+    justify-content: center;
+    margin-top: 10%;
+}
+#product_image{
+    object-fit:contain;
+    width: 100%;
+    
+}
+h1{
+    font-size: 30px;
+    text-align: left;
+}
+#product_description{
+    margin-bottom: 1em;
+    width: 100%;
+}
+.product_specs{
+    flex-direction: column;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 3%;
+    margin-left: 5%;
+    height:fit-content;
+    width: 30%;
+
+}
+#id{
+    border-bottom: 1px solid gray;
+}
+*{
+    font-family: "Uniqlo Pro Light";
+}
+h3{
+    font-size: 20px;
+}
+#product_price{
+    justify-content: left;
+    width:90%;
+    margin-top: 0;
+}
+.product_sizes{
+    justify-content:left;
+}
+.button-size{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+#buttons{
+    justify-content: left;
+    margin: 5px;
+}
+.colors{
+    justify-content: left;
+    flex-direction: column;
+}
+.button-color{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+.add_to_wishlist{
+    height: 50px;
+    width: 50%;
+    margin: 0.5em;
+    border: none;
+    background-color: rgb(179, 174, 174);
+    color: white;
+}
+
+#star{
+    color:#f8fc2c;
+    font-size: x-large;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+button{
+    cursor: pointer;
+    transition-duration: 0.1 s;
+    opacity: 0.8;
+    border: 0.5px #ccc;
+    font-size: inherit;
+}
+button:hover{
+    opacity: 3;
+    border: 1px solid black;
+}
+
+.image_description{
+    flex-direction: column;
+    width: 33%;
+    margin: 1em;
+}
+.id_and_reviews{
+    flex-direction: column;
+    width:100%;
+}
+.product_reviews{
+    flex-direction: column;
+}
+input[type=text], select {
+    width:30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.user_reviews{
+    position: relative;
+    border: solid;
+}
+#fblogo{
+    width: 3em;
+    height: 3em;
+    padding: 5px;
+    border-radius: 10px;
+}
+#twitterlogo{
+    width: auto;
+    height: 50px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.review_title_container{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid gray;
+}
+h2{
+    margin-top:2rem;
+    padding:0;
+    margin-bottom: 1px;
+    font-size: 25px;
+}
+.product_description{
+    margin: 0;
+    flex-direction: column;
+}
+p{
+    text-align: justify;
+}
+#social_media{
+    opacity: 2;
+    background: white;
+    padding:0;
+    margin-right: 5px;
+    border: none;
+}
+#review_title{
+    width: 90%;
+    margin:auto;
+}
+#review_date{
+    width: fit-content;
+    margin:auto;
+}
+.user_review_container{
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+}
+.share_container{
+    margin-top: 5%;
+    flex-direction: column;
+}
