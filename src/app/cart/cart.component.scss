@@ -35,6 +35,10 @@ hr {
     top: 0;
 }
 
+.cart-list {
+    height:800px;
+}
+
 .panel-contents {
     width: 100%;
 }
@@ -91,6 +95,7 @@ hr {
 
 .price-results {
     float: right;
+    text-align: right;
 }
 
 .prices-section {
@@ -104,6 +109,10 @@ hr {
 
 .coupon-button {
     float:right;
+}
+
+.coupon-icon {
+    margin-right: 1rem;
 }
 
 .coupon-section {
