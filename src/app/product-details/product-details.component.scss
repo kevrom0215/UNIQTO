@@ -30,6 +30,7 @@ div{
 h1{
     font-size: 30px;
     text-align: left;
+    font-weight: bold;
 }
 #product_description{
     margin-bottom: 1em;
@@ -44,7 +45,7 @@ h1{
     margin-left: 5%;
     height:fit-content;
     width: 30%;
-
+    padding-top: 7%;
 }
 #id{
     border-bottom: 1px solid gray;
@@ -95,13 +96,7 @@ h3{
     font-size: x-large;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-button{
-    cursor: pointer;
-    transition-duration: 0.1 s;
-    opacity: 0.8;
-    border: 0.5px #ccc;
-    font-size: inherit;
-}
+
 button:hover{
     opacity: 3;
     border: 1px solid black;
@@ -185,4 +180,7 @@ p{
 }
 .title_and_date{
     border-bottom: 1px solid gray;
+}
+.button_sizes_container{
+    margin-bottom: 10%;
 }
