@@ -145,8 +145,6 @@ input[type=text], select {
     border-radius: 10px;
 }
 .review_title_container{
-    margin: 0;
-    padding: 0;
     border-bottom: 1px solid gray;
 }
 h2{
@@ -179,9 +177,12 @@ p{
 }
 .user_review_container{
     flex-direction: column;
-    border-bottom: 1px solid gray;
+    margin-top: 5%;
 }
 .share_container{
     margin-top: 5%;
     flex-direction: column;
+}
+.title_and_date{
+    border-bottom: 1px solid gray;
 }
