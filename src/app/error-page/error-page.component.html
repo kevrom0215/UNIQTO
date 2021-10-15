@@ -14,3 +14,34 @@
     </div>
 </div>
 
+<!-- BLOCK OF CODE BELOW IS FOR TESTING PURPOSES ONLY!!! THIS WILL BE DELETED! -->
+<div>
+    <ng-container *ngFor="let product of products">
+    <div>
+        <ul>
+            <li>{{product.productID}}</li>
+            <li>{{product.productName}}</li>
+            <li>{{product.productPrice}}</li>
+            <li>{{product.productImage}}</li>
+            <li>Product Schemes:</li>
+            <ng-container *ngFor="let scheme of product.productScheme">
+                <ul>
+                    <li>{{scheme.schemeName}}</li>
+                    <li>{{scheme.schemeLink}}</li>
+                </ul>
+            </ng-container>
+            <li>{{product.productScheme}}</li>
+            <li>{{product.productDescription}}</li>
+            <li>Product Reviews:</li>
+            <ng-container *ngFor="let review of product.productReviews">
+                <ul>
+                    <li>{{review.username}}</li>
+                    <li>{{review.userRating}}</li>
+                    <li>{{review.userReview}}</li>
+                    <li>{{review.reviewDate}}</li>
+                </ul>
+            </ng-container>
+        </ul>
+    </div>
+    </ng-container>
+</div>
