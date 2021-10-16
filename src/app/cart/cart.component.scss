@@ -36,7 +36,8 @@ hr {
 }
 
 .cart-list {
-    height:800px;
+    // height:1000px;
+    overflow: auto;
 }
 
 .panel-contents {
@@ -64,6 +65,9 @@ hr {
 }
 
 .cancel-button {
+    position: relative;
+    left:13px;
+    bottom:10px;
     float: right;
     font-size: 2rem;
 }
@@ -162,6 +166,21 @@ hr {
     margin-bottom: 2rem;
 }
 
+.spacer{
+    height: 100px;
+}
+
+.empty{
+    padding-left: 0;
+    padding-right: 10;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.empty-button {
+    margin-top:50px;
+    width: 55%;
+}
 
 
 

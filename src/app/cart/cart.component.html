@@ -8,14 +8,22 @@
         <div class="cart-list col space-between-2">
             <div class="container-fluid">
                     <ol class="pad-left-remove">
-                        <li>
+                        <ng-container *ngIf="products.length==0">
+                            <div class="container empty">
+                                <h3>Whaat?? Your cart is currently empty... Click the button below to continue shopping</h3>
+                                <div class="empty-button">
+                                    <button class="btn btn-primary checkout-button" type="button">CONTINUE SHOPPING</button>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <li *ngFor="let item of products">
                             <div class="panel-contents">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="image-section col-4">
                                             <a href="">
                                                 <div class="product-image">
-                                                    <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/433031/item/goods_29_433031.jpg?width=1600&impolicy=quality_75" alt="">
+                                                    <img src={{item.chosenPhoto}} alt="">
                                                 </div>
                                             </a>
                                         </div>
@@ -25,16 +33,13 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col">
-                                                                <h3><strong>SAMPLE SHIRT</strong></h3>
-                                                                <!-- <dl>prod ID</dl>
-                                                                <dl>prod COLOR</dl>
-                                                                <dl>prod SIZE</dl> -->
-                                                                <h5>Product ID</h5>
-                                                                <h5>Color</h5>
-                                                                <h5>Size</h5>
+                                                                <h3><strong>{{item.productName}}</strong></h3>
+                                                                <h5>Product ID: {{item.productID}}</h5>
+                                                                <h5>Color: {{item.chosenColor}}</h5>
+                                                                <h5>Size: {{item.chosenSize}}</h5>
                                                             </div>
                                                             <div class="col-2 cancel-div">
-                                                                <i type="button" class="far fa-times-circle cancel-button"></i>
+                                                                <i type="button" class="bi bi-x cancel-button"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -58,7 +63,7 @@
                                                                     </select>
                                                             </div>
                                                             <div class="prod-subtotal col">
-                                                                <h4><strong>SUBTOTAL: XXX</strong></h4>
+                                                                <h4><strong>SUBTOTAL: {{item.productPrice}}</strong></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -126,7 +131,7 @@
             <div class="row">
                 <div class="checkout-section">
                     <button class="btn btn-dark checkout-button" type="button">CHECKOUT</button>
-                    <button class="btn btn-primary checkout-button" type="button">CONTINUE SHOPPING</button>
+                    <button class="btn btn-primary checkout-button" type="button" *ngIf="products.length!=0">CONTINUE SHOPPING</button>
                 </div>
             </div>
         </div>
