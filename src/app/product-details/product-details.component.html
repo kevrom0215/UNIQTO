@@ -46,7 +46,7 @@
         </h1>
       </div>
       <div class = "price_and_review_container">
-        <!product_price-->
+        <!--product_price-->
         <h1 id= "product_price">PHP {{product.productPrice}}</h1> 
         <div>
         <ng-container *ngFor = "let review of product.productReviews">
@@ -65,9 +65,8 @@
             COLOR:
           </span>
         </div>
-        <div id = "button-color-container">
-          <input type="image" src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/430270/chip/goods_09_430270_chip.jpg">
-          <input type="image" src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/430270/chip/goods_69_430270_chip.jpg">
+        <div id = "button-color-container" *ngFor="let color of product.productScheme">
+          <input type="image" src="{{color.schemeLink}}">
         </div>
       </div>
       <div class= "product_sizes">
