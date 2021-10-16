@@ -21,6 +21,11 @@ export class ProductDetailsComponent implements OnInit {
   //   })
   // }
   public product: any = {};
+  chosenProductID: string|null="";
+  chosenProductPrice: any;
+  chosenProductName: string | null="";
+  chosenProductColor: string | null="";
+  chosenProductSize: string| null="";
   
   constructor(private productDetailsService : ProductDetailsService) {}
 
@@ -28,7 +33,14 @@ export class ProductDetailsComponent implements OnInit {
     this.productDetailsService.getProduct()
     .subscribe(res=>{
       this.product = res;
-      console.log(this.product);
     })
+  }
+  addToCart(){
+    this.chosenProductID = this.product.productID;
+    this.chosenProductName = this.product.productName;
+    this.chosenProductPrice = this.product.productPrice;
+    console.log(this.chosenProductSize);
+    console.log(this.chosenProductColor);
+    
   }
 }

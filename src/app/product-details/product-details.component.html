@@ -19,13 +19,14 @@
           <h2>Reviews ({{product.productReviews.length}})</h2><!--product.review.length-->
         </div>
         <!-----user reviews-->
+        <ng-container *ngFor = "let review of product.productReviews">
         <div class="user_review_container">
           <div class="title_and_date">
             <div id= "review_title">
-              <h3>review title</h3>
+              <h3>{{product.productReviews.username}}</h3>
             </div>
             <div id="review_date">
-              <span>review date</span>
+              <span>{{product.productReviews.reviewDate}}</span>
             </div>
           </div>
           <div class="review_text">
@@ -33,7 +34,8 @@
               review text
             </p>
           </div>
-        </div>       
+        </div>
+      </ng-container>       
       </div><!--closing review container-->
     </div>  
   </div>
@@ -47,12 +49,10 @@
         <!product_price-->
         <h1 id= "product_price">PHP {{product.productPrice}}</h1> 
         <div>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&star;</span>
-        </div>        
+        <ng-container *ngFor = "let review of product.productReviews">
+          <span id="star">&starf;</span>
+        </ng-container>
+      </div>        
       </div>
       <div id="product_description">
         <p>
@@ -83,7 +83,7 @@
         <button class = "button-size">L</button>
       </div>
       <div>
-        <button class= "add_to_cart">ADD TO CART</button>
+        <button class= "add_to_cart" (click) = "addToCart()">ADD TO CART</button>
         <button class = "add_to_wishlist">ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
