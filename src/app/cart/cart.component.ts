@@ -10,14 +10,22 @@ export class CartComponent implements OnInit {
 
   // hardocded data for now
   public products : any=[
-    // {
-    //   productID: 441647,
-    //   productName:"Easy Care Comfort Striped Long Sleeve Shirt",
-    //   productPrice: 1290,
-    //   chosenColor: "66 BLUE",
-    //   chosenSize:"M",
-    //   chosenPhoto:"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441647/item/goods_66_441647.jpg?width=1600&impolicy=quality_75"
-    // }
+    {
+      productID: 441647,
+      productName:"Easy Care Comfort Striped Long Sleeve Shirt",
+      productPrice: 1290,
+      chosenColor: "66 BLUE",
+      chosenSize:"M",
+      chosenPhoto:"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441647/item/goods_66_441647.jpg?width=1600&impolicy=quality_75"
+    },
+    {
+      productID: 441647,
+      productName:"Easy Care Comfort Striped Long Sleeve Shirt",
+      productPrice: 1290,
+      chosenColor: "66 BLUE",
+      chosenSize:"M",
+      chosenPhoto:"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441647/item/goods_66_441647.jpg?width=1600&impolicy=quality_75"
+    }
   ];
   public grandTotal !: number;
 
@@ -31,6 +39,10 @@ export class CartComponent implements OnInit {
     //   console.log(this.products);
     //   this.grandTotal = this.cartService.getTotalPrice();
     // })
+  }
+
+  removeItem(item: any){
+    this.cartService.removeCartItem(item);
   }
 
 }

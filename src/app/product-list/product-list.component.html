@@ -2,7 +2,7 @@
 <!-- PRODUCT CARDS -->
 <div class="product-container">
     <ng-container *ngFor = "let product of productList"><!-- *ngFor="product of Products"-->
-    <a [routerLink]="['/product-details/{{product.productName}}']">
+    <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
