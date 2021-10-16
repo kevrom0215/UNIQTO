@@ -1,12 +1,12 @@
 <!-- <p>product-list works!</p> -->
 <!-- PRODUCT CARDS -->
 <div class="product-container">
-    <!-- *ngFor="product of Products"-->
+    <ng-container *ngFor = "let product of productList"><!-- *ngFor="product of Products"-->
     <a [routerLink]="['/product-details']">
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
-                <img src="https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/440493/item/phgoods_04_440493.jpg?width=1600&impolicy=quality_75" class="product-thumb" alt="">
+                <img src={{product.productImage}} class="product-thumb" alt="">
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
@@ -18,77 +18,11 @@
                       <span class="circle yellow " id="yellow"></span>
                     </div>
                 </div>
-                <h2 class="product-brand">brand</h2>
+                <h2 class="product-brand">{{product.productName}}</h2>
                 <p class="product-rating">Rating (Number of Reviews)</p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
+                <span class="price">{{product.productPrice | currency}}</span>
             </div>
         </div>
     </a>
-
-        <!--another product card-->
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/440493/item/phgoods_04_440493.jpg?width=1600&impolicy=quality_75" class="product-thumb" alt="">
-                <button class="card-btn">add to wishlist</button>
-            </div>
-            <div class="product-info">
-                <div class="color-option">
-                    <span class="color"></span>
-                    <div class="circles">
-                      <span class="circle blue "  id="blue"></span>
-                      <span class="circle pink " id="pink"></span>
-                      <span class="circle yellow " id="yellow"></span>
-                    </div>
-                </div>
-                <h2 class="product-brand">brand</h2>
-                <p class="product-rating">Rating (Number of Reviews)</p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-
-
-    <!--another product card-->
-    <div class="product-card">
-        <div class="product-image">
-            <span class="discount-tag">50% off</span>
-            <img src="https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/440493/item/phgoods_04_440493.jpg?width=1600&impolicy=quality_75" class="product-thumb" alt="">
-            <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-            <div class="color-option">
-                <span class="color"></span>
-                <div class="circles">
-                    <span class="circle blue "  id="blue"></span>
-                    <span class="circle pink " id="pink"></span>
-                    <span class="circle yellow " id="yellow"></span>
-                </div>
-            </div>
-            <h2 class="product-brand">brand</h2>
-            <p class="product-rating">Rating (Number of Reviews)</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-    </div>
-
-    <!--another product card-->
-    <div class="product-card">
-        <div class="product-image">
-            <span class="discount-tag">50% off</span>
-            <img src="https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/440493/item/phgoods_04_440493.jpg?width=1600&impolicy=quality_75" class="product-thumb" alt="">
-            <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-            <div class="color-option">
-                <span class="color"></span>
-                <div class="circles">
-                  <span class="circle blue "  id="blue"></span>
-                  <span class="circle pink " id="pink"></span>
-                  <span class="circle yellow " id="yellow"></span>
-                </div>
-            </div>
-            <h2 class="product-brand">brand</h2>
-            <p class="product-rating">Rating (Number of Reviews)</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-    </div>
+    </ng-container>
 </div>
