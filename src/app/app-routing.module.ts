@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {path: 'cart', component: CartComponent},
       // Please delete after use
-      {path: 'product-details', component: ProductDetailsComponent},
+      {path: 'product-details/{{product.productName}}', component: ProductDetailsComponent},
       {path: 'welcome', component: ProductListComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: '', redirectTo:'welcome', pathMatch:'full'},
