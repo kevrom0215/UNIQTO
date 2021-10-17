@@ -50,6 +50,7 @@
         <textarea class="form-control" placeholder="Leave a message here" id="floatingTextArea"  formControlName="message"></textarea>
         <label for="floatingTextArea">Message</label>
       </div>
+      <!-- Validation -->
       <p class="text-danger" *ngIf="message?.touched && !message?.valid">
         <span *ngIf="message?.errors?.required">
           A message is required.
