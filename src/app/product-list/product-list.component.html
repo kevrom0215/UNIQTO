@@ -1,14 +1,21 @@
 <!-- <p>product-list works!</p> -->
 <!-- PRODUCT CARDS -->
+<div class = "displayarea">
+    <h1>ALL PRODUCTS</h1>
+</div>
 <div class="product-container">
-    <ng-container *ngFor = "let product of productList"><!-- *ngFor="product of Products"-->
-    <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">50% off</span>
+    <ng-container *ngFor = "let product of productList">
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">30% off</span>
+            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
                 <img src={{product.productImage}} class="product-thumb" alt="">
-                <button class="card-btn">add to wishlist</button>
-            </div>
+            </a>
+            
+            <!-- for wishlist -->
+            <i type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">Add to Wishlist</i>
+            
+        </div>
             <div class="product-info">
                 <div class="color-option">
                     <span class="color"></span>
@@ -18,11 +25,31 @@
                       <span class="circle yellow " id="yellow"></span>
                     </div>
                 </div>
-                <h2 class="product-brand">{{product.productName}}</h2>
-                <p class="product-rating">Rating ({{product.productReviews.length}})</p>
-                <span class="price">{{product.productPrice | currency}}</span>
+                <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                    <h2 class="product-brand">{{product.productName}}</h2>
+                
+                    <p class="product-rating">Rating ({{product.productReviews.length}})</p>
+                    <span class="price">{{product.productPrice | currency}}</span>
+                </a>
             </div>
         </div>
-    </a>
+
+        <!-- modal for wishlist -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn-wishlist">View Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </ng-container>
 </div>
+
+
+

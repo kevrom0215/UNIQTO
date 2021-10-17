@@ -1,7 +1,7 @@
 <div class= "main_div">
   <div class = "image_description">
     <div class="image_container">
-      <img id = "product_image"> <!--src = "{{productImage}}"-->
+      <img id = "product_image" src="{{product.productImage}}"> <!--src = "{{productImage}}"-->
     </div>
     <div class = "id_and_reviews">
       <div class = "product_description">
@@ -9,54 +9,54 @@
           <h2>Product ID: {{product.productID}}</h2>
         </div>
         <div>
-          <p>// product description
-            productDesription
+          <p>
+            {{product.productDescription}}
           </p>
         </div>     
       </div>
       <div class = "product_reviews">
         <div class = "review_title_container">
-          <h2>Reviews (length)</h2><!--product.review.length-->
+          <h2>Reviews ({{product.productReviews.length}})</h2><!--product.review.length-->
         </div>
         <!-----user reviews-->
+        <ng-container *ngFor = "let review of product.productReviews">
         <div class="user_review_container">
           <div class="title_and_date">
             <div id= "review_title">
-              <h3>review title</h3>
+              <h3>{{review.username}}</h3>
             </div>
             <div id="review_date">
-              <span>review date</span>
+              <span>{{review.reviewDate}}</span>
             </div>
           </div>
           <div class="review_text">
             <p>
-              review text
+              {{review.userReview}}
             </p>
           </div>
-        </div>       
+        </div>
+      </ng-container>       
       </div><!--closing review container-->
     </div>  
   </div>
     <div class = "product_specs">
       <div class = "product_title">
         <h1>
-          product title
+          {{product.productName}}
         </h1>
       </div>
       <div class = "price_and_review_container">
-        <!product_price-->
-        <h1 id= "product_price">PHP product price</h1> 
+        <!--product_price-->
+        <h1 id= "product_price">PHP {{product.productPrice}}</h1> 
         <div>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&starf;</span>
-            <span id="star">&star;</span>
-        </div>        
+        <ng-container *ngFor = "let review of product.productReviews">
+          <span id="star">&starf;</span>
+        </ng-container>
+      </div>        
       </div>
       <div id="product_description">
         <p>
-          product description
+          {{product.productDescription}}
           </p>  
       </div> 
       <div class="colors">
@@ -65,9 +65,8 @@
             COLOR:
           </span>
         </div>
-        <div id = "button-color-container">
-          <input type="image" src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/430270/chip/goods_09_430270_chip.jpg">
-          <input type="image" src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/430270/chip/goods_69_430270_chip.jpg">
+        <div id = "button-color-container" *ngFor="let color of product.productScheme">
+          <input type="image" src="{{color.schemeLink}}">
         </div>
       </div>
       <div class= "product_sizes">
@@ -83,7 +82,7 @@
         <button class = "button-size">L</button>
       </div>
       <div>
-        <button class= "add_to_cart">ADD TO CART</button>
+        <button class= "add_to_cart" (click) = addToCart(product)>ADD TO CART</button>
         <button class = "add_to_wishlist">ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
@@ -98,3 +97,5 @@
     </div>
     
 </div>
+
+

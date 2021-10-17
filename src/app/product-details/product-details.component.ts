@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 import { ProductDetailsService } from '../product-details.service';
 import { ProductListComponent } from '../product-list/product-list.component';
-
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -26,7 +26,9 @@ export class ProductDetailsComponent implements OnInit {
 
   public prodToKeep: any = {};
   
-  constructor(private productDetailsService : ProductDetailsService) {}
+  // constructor(private productDetailsService : ProductDetailsService) {}
+    
+  constructor(private productDetailsService : ProductDetailsService, private cartService: CartService, private _route:ActivatedRoute) {}
 
   
 
@@ -43,6 +45,16 @@ export class ProductDetailsComponent implements OnInit {
     this.prodToKeep = sessionStorage.getItem("theProduct");
     this.product = JSON.parse(this.prodToKeep);
     
+    // this.productDetailsService.getProduct()
+    // .subscribe(res=>{
+    //   this.product = res;
+    // })
+    
+  }
+
+  addToCart(product:any){
+    this.cartService.addtoCart(product);
+    alert("Item added to cart");
   }
 
 }
