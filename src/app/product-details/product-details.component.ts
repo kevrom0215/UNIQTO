@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 import { ProductDetailsService } from '../product-details.service';
+import { ProductListComponent } from '../product-list/product-list.component';
+
 
 @Component({
   selector: 'app-product-details',
@@ -21,14 +23,26 @@ export class ProductDetailsComponent implements OnInit {
   //   })
   // }
   public product: any = {};
+
+  public prodToKeep: any = {};
   
   constructor(private productDetailsService : ProductDetailsService) {}
 
+  
+
   ngOnInit(): void {
-    this.productDetailsService.getProduct()
-    .subscribe(res=>{
-      this.product = res;
-      console.log(this.product);
-    })
+
+
+
+    // let thisone = this.productDetailsService.getProduct()
+    // .subscribe(res=>{
+    //   this.product = res;;
+    // })
+
+
+    this.prodToKeep = sessionStorage.getItem("theProduct");
+    this.product = JSON.parse(this.prodToKeep);
+    
   }
+
 }
