@@ -22,18 +22,19 @@ export class ProductDetailsComponent implements OnInit {
   //   })
   // }
   public product: any = {};
-
-  
-  constructor(private productDetailsService : ProductDetailsService, private cartService: CartService) {}
+    
+  constructor(private productDetailsService : ProductDetailsService, private cartService: CartService, private _route:ActivatedRoute) {}
 
   ngOnInit(): void {
     this.productDetailsService.getProduct()
     .subscribe(res=>{
       this.product = res;
     })
-  }
-  addToCart(item:any){
-    this.cartService.addtoCart(item);
     
   }
+  addToCart(product:any){
+    this.cartService.addtoCart(product);
+    alert("Item added to cart");
+  }
+
 }
