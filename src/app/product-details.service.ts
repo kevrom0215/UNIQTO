@@ -44,7 +44,15 @@ export class ProductDetailsService {
     return sum / product.productReviews.length;
   }
 
-  // getColorScheme(product : any){
-  //   return product.productScheme.sc
-  // }
+  getColorScheme(product:any, index:any){
+    let colorToReturn : string;
+    colorToReturn =  product.productScheme[0].schemeName[index];
+    return colorToReturn;
+  }
+
+  getProperPhoto(product:any, index:any){
+    let urlToReturn : string;
+    urlToReturn  = product.productImage[index]
+    return urlToReturn;
+  }
 }

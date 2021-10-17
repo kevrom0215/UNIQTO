@@ -40,11 +40,19 @@ export class CartService {
   }
 
   removeCartItem(product: any){
-    this.cartItemList.map((a:any, index:any)=>{
-      if(product.id === a.id){
-        this.cartItemList.splice(index,1)
+    // this.cartItemList.map((a:any, index:any)=>{
+    //   if(product.productID === a.productID){
+    //     this.cartItemList.splice(index,1)
+    //   }
+    // })
+    for(let i=0 ; i<this.cartItemList.length ; i++){
+      if(product.productID === this.cartItemList[i].productID){
+        console.log(product.productID, " is equal to ", this.cartItemList[i].productID);
+        console.log(this.cartItemList);
+        console.log(i);
+        this.cartItemList.splice(i,1)
       }
-    })
+    }
     this.productList.next(this.cartItemList);
   }
 }
