@@ -59,7 +59,7 @@ export class ProductDetailsComponent implements OnInit {
       chosenPhoto: this.photoToChoose,
     };
     this.cartService.addtoCart(myCustomObject);
-    // alert("Item added to cart");
+    alert("Item added to cart");
   }
 
   textureAssign(product:any, index:number){
