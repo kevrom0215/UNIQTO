@@ -162,13 +162,19 @@ p{
     margin-right: 5px;
     border: none;
 }
-#review_title{
+.reviewtitle{
+    justify-content: left;
     width: 90%;
-    margin:auto;
+}
+#review_title{
+    
+    font-weight: bold;
+
 }
 #review_date{
     width: fit-content;
     margin:auto;
+    
 }
 .user_review_container{
     flex-direction: column;
@@ -178,8 +184,8 @@ p{
     margin-top: 5%;
     flex-direction: column;
 }
-.title_and_date{
-    border-bottom: 1px solid gray;
+.starcontainer{
+    margin-bottom: 5%;
 }
 .button_sizes_container{
     margin-bottom: 10%;
