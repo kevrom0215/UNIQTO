@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,15 +10,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   // ngModel
   searchTerm = "";
-
+  products : any = [];
+  cartCount : number = 0;
   // Inject Route and Router
-  constructor(private route:ActivatedRoute, private router: Router) { }
+  constructor(private route:ActivatedRoute, private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       if(params.searchTerm){
         this.searchTerm = params.searchTerm;
       }
+    })
+
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.products = res;
+      console.log(this.products);
+      this.cartCount = this.products.length;
     })
   }
 

@@ -92,13 +92,13 @@
       <div class="colors">
         <div>
           <span>
-            COLOR:
+            CHOOSE YOUR COLOR:
           </span>
         </div>
         <div>
           <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
             <div class="color-seperator">
-              <input class = "button-color" type="image" src={{colors}}>
+              <input class = "button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
             </div>
           </div>
         </div>
@@ -106,17 +106,17 @@
       <div class= "product_sizes">
         <div>
           <span>
-            SIZE:
+            CHOOSE YOUR SIZE:
           </span>
         </div>    
       </div>
       <div class = "button_sizes_container">
-        <button class = "button-size">S</button>
-        <button class = "button-size">M</button>
-        <button class = "button-size">L</button>
+        <button class = "button-size" (click)="sizeAssign('S')">S</button>
+        <button class = "button-size" (click)="sizeAssign('M')">M</button>
+        <button class = "button-size" (click)="sizeAssign('L')">L</button>
       </div>
       <div>
-        <button class= "add_to_cart" (click) = addToCart(product)>ADD TO CART</button>
+        <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd">ADD TO CART</button>
         <button class = "add_to_wishlist">ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
@@ -129,8 +129,9 @@
         </div>
         </div>
     </div>
-    
 </div>
+
+
 
 
 

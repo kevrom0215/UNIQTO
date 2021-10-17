@@ -25,7 +25,10 @@ export class ProductDetailsComponent implements OnInit {
   public product: any = {};
   public prodToKeep: any = {};
   public averageRating : number = 0;
-  public colorToChoose : any = [];
+  public photoToChoose : string = "";
+  public colorToChoose : string = "";
+  public sizeToChoose : string = "";
+  public canFinallyAdd : boolean = false;
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     
@@ -46,9 +49,36 @@ export class ProductDetailsComponent implements OnInit {
     this.averageRating = this.productDetailsService.getAverageStars(this.product);
   }
 
-  addToCart(product:any){
-    this.cartService.addtoCart(product);
+  addToCart(){
+    let myCustomObject : object = {
+      productID: this.product.productID,
+      productName: this.product.productName,
+      productPrice: this.product.productPrice,
+      chosenColor: this.colorToChoose,
+      chosenSize: this.sizeToChoose,
+      chosenPhoto: this.photoToChoose,
+    };
+    this.cartService.addtoCart(myCustomObject);
     alert("Item added to cart");
   }
 
+  textureAssign(product:any, index:number){
+    this.colorToChoose = this.productDetailsService.getColorScheme(product, index);
+    this.photoToChoose = this.productDetailsService.getProperPhoto(product, index);
+    console.log("COLOR: " , this.colorToChoose);
+    console.log("URL: ", this.photoToChoose);
+    this.checkIfClear();
+  }
+
+  sizeAssign(size: string){
+    this.sizeToChoose = size;
+    console.log("SIZE: ", this.sizeToChoose);
+    this.checkIfClear();
+  }
+
+  checkIfClear(){
+    if(this.sizeToChoose !== "" && this.colorToChoose !== "" && this.photoToChoose !== ""){
+      this.canFinallyAdd = true;
+    }
+  }
 }

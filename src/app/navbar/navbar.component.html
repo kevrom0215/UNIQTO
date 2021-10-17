@@ -16,8 +16,8 @@
         <a class="nav-link" [routerLink]="['/cart']">
             <button class="btn btn-primary position-relative">
                 <i class="bi bi-cart"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    1
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="cartCount != 0">
+                    {{cartCount}}
                     <span class="visually-hidden">Quantity in Cart</span>
                 </span>
             </button>
