@@ -16,6 +16,7 @@ const routes: Routes = [
       // Please delete after use
       {path: 'product-details/:id', component: ProductDetailsComponent},
       {path: 'welcome', component: ProductListComponent},
+      {path: 'welcome/:searchTerm', component: ProductListComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: 'contact-us', component: ContactUsComponent},
       {path: '', redirectTo:'welcome', pathMatch:'full'},

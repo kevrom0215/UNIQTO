@@ -1,7 +1,12 @@
 <!-- <p>product-list works!</p> -->
 <!-- PRODUCT CARDS -->
 <div class = "displayarea">
-    <h1>ALL PRODUCTS</h1>
+    <ng-container *ngIf="searchTerm==''; else customHeader">
+        <h1>ALL PRODUCTS</h1>
+    </ng-container>
+    <ng-template #customHeader>
+        <h1>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</h1>
+    </ng-template>
 </div>
 <div class="product-container">
     <ng-container *ngFor = "let product of productList">
