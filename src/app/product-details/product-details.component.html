@@ -43,14 +43,16 @@
         <ng-container *ngFor = "let review of product.productReviews">
         <div class="user_review_container">
           <div class="title_and_date">
-            <div id= "review_title">
-              <h3>{{review.username}}</h3>
+            <div class="reviewtitle">
+              <h3 id = "review_title">{{review.username}}</h3>
             </div>
             <div id="review_date">
               <span>{{review.reviewDate}}</span>
             </div>
           </div>
+          <div class = "starcontainer" >
           <app-star [rating]="review.userRating"></app-star>
+          </div>
           <div class="review_text">
             <p>
               {{review.userReview}}
