@@ -25,6 +25,7 @@ export class ProductDetailsComponent implements OnInit {
   public product: any = {};
   public prodToKeep: any = {};
   public averageRating : number = 0;
+  public colorToChoose : any = [];
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     

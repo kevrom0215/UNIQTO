@@ -43,4 +43,8 @@ export class ProductDetailsService {
     }
     return sum / product.productReviews.length;
   }
+
+  // getColorScheme(product : any){
+  //   return product.productScheme.sc
+  // }
 }

@@ -93,9 +93,11 @@
             COLOR:
           </span>
         </div>
-        <div id = "button-color-container">
-          <div *ngFor="let color of product.productScheme">
-            <input type="image" src={{color.schemeLink}}>
+        <div>
+          <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
+            <div class="color-seperator">
+              <input class = "button-color" type="image" src={{colors}}>
+            </div>
           </div>
         </div>
       </div>
