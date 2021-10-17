@@ -28,17 +28,19 @@ export class ProductDetailsService {
   revealProduct(product: any){
     this.listItem = product;
     this.productItem.next(this.listItem);
-    // console.log(sessionStorage.getItem("theProduct"));
-    // this.itemToShow = sessionStorage.getItem("theProduct");
-    // console.log((JSON.parse(JSON.stringify(this.itemToShow))));
-    this.returnItem(product)
+    this.returnItem(product);
   }
 
   returnItem(product: any){
     sessionStorage.theProduct = product;
-    // this.itemToShow = product;
     sessionStorage.setItem("theProduct", JSON.stringify(product));
-    // this.itemToShow = JSON.parse(sessionStorage.theProduct);
-    // console.log(this.itemToShow); 
+  }
+
+  getAverageStars(product: any){
+    let sum : number = 0;
+    for(let i=0; i<product.productReviews.length; i++){
+      sum = sum + product.productReviews[i].userRating;
+    }
+    return sum / product.productReviews.length;
   }
 }

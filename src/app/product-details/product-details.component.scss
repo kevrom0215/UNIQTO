@@ -194,5 +194,24 @@ input[type=image], select {
     margin: 2px;
 }
 
+.review-summary {
+    width:100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.rating-display {
+    width:50px;
+    // margin-right: 15px;
+}
+
+.actual-rating { 
+    margin:0;
+}
+
+.carousel-control:hover { 
+    border: none;
+}
+
 
 

@@ -23,8 +23,8 @@ export class ProductDetailsComponent implements OnInit {
   //   })
   // }
   public product: any = {};
-
   public prodToKeep: any = {};
+  public averageRating : number = 0;
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     
@@ -34,14 +34,6 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
-    // let thisone = this.productDetailsService.getProduct()
-    // .subscribe(res=>{
-    //   this.product = res;;
-    // })
-
-
     this.prodToKeep = sessionStorage.getItem("theProduct");
     this.product = JSON.parse(this.prodToKeep);
     
@@ -49,7 +41,8 @@ export class ProductDetailsComponent implements OnInit {
     // .subscribe(res=>{
     //   this.product = res;
     // })
-    
+
+    this.averageRating = this.productDetailsService.getAverageStars(this.product);
   }
 
   addToCart(product:any){

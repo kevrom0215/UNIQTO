@@ -13,6 +13,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CartComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

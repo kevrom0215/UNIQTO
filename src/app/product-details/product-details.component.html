@@ -1,7 +1,28 @@
 <div class= "main_div">
   <div class = "image_description">
     <div class="image_container">
-      <img id = "product_image" src="{{product.productImage}}"> <!--src = "{{productImage}}"-->
+      <!-- <img id = "product_image" src="{{product.productImage}}">  -->
+      <!--src = "{{productImage}}"-->
+      <!-- image carousel -->
+      <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src={{product.productImage[0]}} class="d-block w-100" alt="clothes">
+          </div>
+          <div class="carousel-item" *ngFor = "let images of product.productImage">
+            <img src={{images}} class="d-block w-100" alt="clothes">
+          </div>
+        </div>
+        <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" onclick="$('#myCarousel').carousel('prev')">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-control" type="button" data-bs-target="#myCarousel" data-bs-slide="next"  onclick="$('#myCarousel').carousel('next')">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
     </div>
     <div class = "id_and_reviews">
       <div class = "product_description">
@@ -29,6 +50,7 @@
               <span>{{review.reviewDate}}</span>
             </div>
           </div>
+          <app-star [rating]="review.userRating"></app-star>
           <div class="review_text">
             <p>
               {{review.userReview}}
@@ -48,12 +70,18 @@
       <div class = "price_and_review_container">
         <!--product_price-->
         <h1 id= "product_price">PHP {{product.productPrice}}</h1> 
-        <div>
-        <ng-container *ngFor = "let review of product.productReviews">
+        <div class="star-container">
+        <!-- <ng-container *ngFor = "let review of product.productReviews">
           <span id="star">&starf;</span>
-        </ng-container>
-      </div>        
+        </ng-container> -->
+        </div>      
       </div>
+      <div class="review-summary">
+        <div class="rating-display">
+          <span><h2 class = "actual-rating">({{averageRating | number:"1.1-1"}})</h2></span>
+        </div>
+        <app-star [rating]="averageRating"></app-star>
+      </div>  
       <div id="product_description">
         <p>
           {{product.productDescription}}
@@ -65,8 +93,10 @@
             COLOR:
           </span>
         </div>
-        <div id = "button-color-container" *ngFor="let color of product.productScheme">
-          <input type="image" src="{{color.schemeLink}}">
+        <div id = "button-color-container">
+          <div *ngFor="let color of product.productScheme">
+            <input type="image" src={{color.schemeLink}}>
+          </div>
         </div>
       </div>
       <div class= "product_sizes">
@@ -97,5 +127,8 @@
     </div>
     
 </div>
+
+
+
 
 
