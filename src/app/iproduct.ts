@@ -16,6 +16,8 @@ export interface IProduct {
     productPrice: number;
     productImage: string[];
     productScheme: ProductScheme[];
+    productOverview: string;
     productDescription: string;
     productReviews: ProductReview[];
+    
 }

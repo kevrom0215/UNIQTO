@@ -185,7 +185,7 @@ p{
     flex-direction: column;
 }
 .starcontainer{
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 .button_sizes_container{
     margin-bottom: 10%;
@@ -222,7 +222,12 @@ input[type=image], select {
 .color-seperator {
     margin:3px;
 }
-
+.product_overview{
+    flex-direction: column;
+}
+#productoverview{
+    margin-bottom: 10px;
+}
 
 
 
