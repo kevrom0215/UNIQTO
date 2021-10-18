@@ -21,10 +21,11 @@ const routes: Routes = [
       {path: 'welcome/:searchTerm', component: ProductListComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: 'contact-us', component: ContactUsComponent},
+      {path: 'wishlist', component: WishlistComponent},
       {path: '', redirectTo:'welcome', pathMatch:'full'},
       {path: '**', component: ErrorPageComponent},
       {path: 'carousel', component: CarouselComponent},
-      {path: 'wishlist', component: WishlistComponent}
+ 
 ];
 
 @NgModule({
