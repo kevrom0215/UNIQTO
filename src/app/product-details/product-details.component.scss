@@ -88,6 +88,9 @@ h3{
     height: 50px;
     width: 50px;
     margin: 5px;
+    &:hover{
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px brown;
+    }
 }
 .add_to_wishlist{
     height: 50px;
@@ -255,6 +258,7 @@ button[disabled]{
 .title_and_date {
     display:flex;
 }
+<<<<<<< HEAD
 
 .picked { 
     font-weight: bold;
@@ -286,6 +290,16 @@ button[disabled]{
 
 .color-seperator input[type="radio"]:checked + label {
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px brown;
+=======
+[type=button]{
+    cursor: pointer;
+    width: auto;
+    margin: 5px;
+    height: 50px;
+    line-height: 0;
+    padding: 20px;
+    
+>>>>>>> dea2042d6b3e98f78ea101812f1c095852ee4a0f
 }
 
 

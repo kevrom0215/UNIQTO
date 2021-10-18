@@ -127,10 +127,17 @@
           </span>
         </div>    
       </div>
+<<<<<<< HEAD
       <div class = "button_sizes_container" (click)="onButtonGroupClick($event)">
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('S')" [ngClass]="isSActive ? 'picked' : 'notPicked'">S</button>
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('M')" [ngClass]="isMActive ? 'picked' : 'notPicked'">M</button>
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('L')" [ngClass]="isLActive ? 'picked' : 'notPicked'">L</button>
+=======
+      <div class="button_sizes_container" role="group">
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('S')">S</button>
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('M')">M</button>
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('L')">L</button>
+>>>>>>> dea2042d6b3e98f78ea101812f1c095852ee4a0f
       </div>
       <div class="flex-buttons">
         <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD TO CART</button>
@@ -147,6 +154,7 @@
         </div>
     </div>
 </div>
+
 
 
 <!-- Modal -->

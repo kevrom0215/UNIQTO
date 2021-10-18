@@ -38,9 +38,4 @@ export class ContactUsComponent implements OnInit {
   get message() {
     return this.myForm.get('message');
   }
-
-  // Calls this function once user hits submit button
-  onSubmit(){
-    alert('Thank you for your feedback!');
-  }
 }
