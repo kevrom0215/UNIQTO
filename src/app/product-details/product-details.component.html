@@ -127,7 +127,7 @@
           </span>
         </div>    
       </div>
-      <div class = "button_sizes_container" (click)="onButtonGroupClick($event)">
+      <div class = "button_sizes_container" >
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('S')" [ngClass]="isSActive ? 'picked' : 'notPicked'">S</button>
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('M')" [ngClass]="isMActive ? 'picked' : 'notPicked'">M</button>
         <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('L')" [ngClass]="isLActive ? 'picked' : 'notPicked'">L</button>
