@@ -7,78 +7,78 @@
     <div class="mainWrapper row">
         <div class="cart-list col space-between-2">
             <div class="container-fluid">
-                    <ol class="pad-left-remove">
-                        <ng-container *ngIf="products.length==0">
-                            <div class="container empty">
-                                <h3>Whaat?? Your cart is currently empty... Click the button below to continue shopping</h3>
-                                <div class="empty-button">
-                                    <button class="btn btn-primary checkout-button" type="button" routerLink="/welcome">CONTINUE SHOPPING</button>
-                                </div>
+                <ol class="pad-left-remove">
+                    <ng-container *ngIf="products.length==0">
+                        <div class="container empty">
+                            <h3>Whaat?? Your cart is currently empty... Click the button below to continue shopping</h3>
+                            <div class="empty-button">
+                                <button class="btn btn-primary checkout-button" type="button" routerLink="/welcome">CONTINUE SHOPPING</button>
                             </div>
-                        </ng-container>
-                        <li *ngFor="let item of products">
-                            <div class="panel-contents">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="image-section col-4">
-                                            <a href="">
-                                                <div class="product-image">
-                                                    <img src={{item.chosenPhoto}} alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="product-details col-8 ">
-                                            <div class="container ">
-                                                <div class="content-1 row">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h3><strong>{{item.productName}}</strong></h3>
-                                                                <h5>Product ID: {{item.productID}}</h5>
-                                                                <h5>Color: {{item.chosenColor}}</h5>
-                                                                <h5>Size: {{item.chosenSize}}</h5>
-                                                            </div>
-                                                            <div class="col-2 cancel-div">
-                                                                <i type="button" class="bi bi-x cancel-button" data-bs-toggle="modal" data-bs-target="#exampleModalLabel4" (click)=pendingForRemoval(item)></i>
-                                                                <!-- Modal -->
-                                                                <div class="modal fade" id=exampleModalLabel4 tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-                                                                    <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to remove this item?</h5>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <button type="button" class="btn btn-secondary remove-confirm" data-bs-dismiss="modal">Cancel</button>
-                                                                            <button type="button" class="btn btn-primary remove-confirm" data-bs-dismiss="modal" (click)="removeItem(pendingItem)">Remove</button>
-                                                                        </div>
+                        </div>
+                    </ng-container>
+                    <li *ngFor="let item of products">
+                        <div class="panel-contents">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="image-section col-4">
+                                        <a routerLink="/product-details/{{item.productID}}">
+                                            <div class="product-image">
+                                                <img src={{item.chosenPhoto}} alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="product-details col-8 ">
+                                        <div class="container ">
+                                            <div class="content-1 row">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h3><strong>{{item.productName}}</strong></h3>
+                                                            <h5>Product ID: {{item.productID}}</h5>
+                                                            <h5>Color: {{item.chosenColor}}</h5>
+                                                            <h5>Size: {{item.chosenSize}}</h5>
+                                                        </div>
+                                                        <div class="col-2 cancel-div">
+                                                            <i type="button" class="bi bi-x cancel-button" data-bs-toggle="modal" data-bs-target="#exampleModalLabel4" (click)=pendingForRemoval(item)></i>
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id=exampleModalLabel4 tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to remove this item?</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                     </div>
+                                                                    <div class="modal-body">
+                                                                        <button type="button" class="btn btn-secondary remove-confirm" data-bs-dismiss="modal">Cancel</button>
+                                                                        <button type="button" class="btn btn-primary remove-confirm" data-bs-dismiss="modal" (click)="removeItem(pendingItem)">Remove</button>
                                                                     </div>
+                                                                </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="content-2 row">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <span><strong>QUANTITY</strong></span>
-                                                                <select class="form-select" aria-label="Default select example" disabled>
-                                                                    <option selected value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="6">6</option>
-                                                                    <option value="7">7</option>
-                                                                    <option value="8">8</option>
-                                                                    <option value="9">9</option>
-                                                                    <option value="10">10</option>
-                                                                    </select>
-                                                            </div>
-                                                            <div class="prod-subtotal col">
-                                                                <h4><strong>SUBTOTAL: {{item.productPrice}}</strong></h4>
-                                                            </div>
+                                            </div>
+                                            <div class="content-2 row">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <span><strong>QUANTITY</strong></span>
+                                                            <select class="form-select" aria-label="Default select example" disabled>
+                                                                <option selected value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="prod-subtotal col">
+                                                            <h4><strong>SUBTOTAL: </strong></h4>
+                                                            <h4><strong>{{item.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</strong></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -86,12 +86,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
                             </div>
-                        </li>
-                    </ol>
+                            <hr>
+                        </div>
+                    </li>
+                </ol>
             </div>
-
         </div>
         <div class="cart-details sticky-top col-lg-4">
             <div class="space-between">

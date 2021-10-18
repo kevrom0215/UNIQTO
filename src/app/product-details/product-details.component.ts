@@ -29,6 +29,7 @@ export class ProductDetailsComponent implements OnInit {
   public colorToChoose : string = "";
   public sizeToChoose : string = "";
   public canFinallyAdd : boolean = false;
+  public successfulAdditon : boolean = true;
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     
@@ -59,7 +60,9 @@ export class ProductDetailsComponent implements OnInit {
       chosenPhoto: this.photoToChoose,
     };
     this.cartService.addtoCart(myCustomObject);
+    // this.successfulAdditon = false;
     alert("Item added to cart");
+    
   }
 
   textureAssign(product:any, index:number){
