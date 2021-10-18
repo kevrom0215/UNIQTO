@@ -36,13 +36,13 @@ import {box-sizing: border-box;}
 .product-image{
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 300px;
     
 }
 
 .product-thumb{
     width: 100%;
-    height: 350px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -123,33 +123,21 @@ import {box-sizing: border-box;}
   .color-option  .circles .circle{
     height: 18px;
     width: 18px;
-    //background: #0071C7;
     border-radius: 50%;
     margin: 0 4px;
     cursor: pointer;
     transition: all 0.4s ease;
   }
   
-  .color-option  .circles .circle.blue{
-    background: #0071C7;
+  .color-option  .circles .button-color{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
     &:hover{
-        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0071C7;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px brown;
     }
   }
 
-  .color-option  .circles .circle.pink{
-    background: #FA1795;
-    &:hover{
-        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #FA1795;
-    }
-  }
-
-  .color-option  .circles .circle.yellow{
-    background: #F5DA00;
-    &:hover{
-        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #F5DA00;
-    }
-  }
   h2{
       font-size: 15px;
       font-weight:bolder;

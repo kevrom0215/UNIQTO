@@ -18,23 +18,29 @@
             </a>
             
             <!-- for wishlist -->
-            <i type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">Add to Wishlist</i>
+            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />
             
         </div>
             <div class="product-info">
                 <div class="color-option">
                     <span class="color"></span>
                     <div class="circles">
-                      <span class="circle blue "  id="blue"></span>
-                      <span class="circle pink " id="pink"></span>
-                      <span class="circle yellow " id="yellow"></span>
+                        <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
+                            <div class="color-seperator">
+                                <input class="button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
+                            </div>
+                        </div>
+                        <!--
+                        <span class="circle blue "  id="blue"></span>
+                        <span class="circle pink " id="pink"></span>
+                        <span class="circle yellow " id="yellow"></span> -->
                     </div>
                 </div>
                 <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
                     <h2 class="product-brand">{{product.productName}}</h2>
                 
                     <p class="product-rating">Rating ({{product.productReviews.length}})</p>
-                    <span class="price">{{product.productPrice | currency}}</span>
+                    <span class="price">{{product.productPrice | currency: 'PHP' : 'symbol-narrow'}}</span>
                 </a>
             </div>
         </div>

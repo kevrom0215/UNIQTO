@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductDetailsService } from '../product-details.service';
 import { ProductService } from '../product.service';
+import { CartService } from '../cart.service';
 
 // Imports for navbar search function
 import { ActivatedRoute } from '@angular/router';
@@ -19,10 +20,18 @@ export class ProductListComponent implements OnInit, OnDestroy {
   public productList: IProduct[] = [];
   public searchTerm: string | null = '';
 
+
+  public prodToKeep: any = {};
+  public averageRating : number = 0;
+  public photoToChoose : string = "";
+  public colorToChoose : string = "";
+  public sizeToChoose : string = "";
+  public canFinallyAdd : boolean = false;
+
   // Used to unsubscribe on page exit
   sub: Subscription = new Subscription;
 
-  constructor(private product: ProductService, private productDetailsService: ProductDetailsService, private route: ActivatedRoute) { }
+  constructor(private product: ProductService, private productDetailsService: ProductDetailsService, private cartService: CartService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.product.getProducts()
@@ -44,6 +53,13 @@ export class ProductListComponent implements OnInit, OnDestroy {
     })
   }
 
+  addToWishlist(){
+    let myCustomObject : object = {
+      chosenColor: this.colorToChoose
+    };
+    //this.cartService.addToWishlist(myCustomObject);
+  }
+
   revealProduct(item: any){
     this.productDetailsService.revealProduct(item);
   }
@@ -53,6 +69,20 @@ export class ProductListComponent implements OnInit, OnDestroy {
     // We use the subscribe variable to unsubscribe on page exit
     this.sub.unsubscribe();
   }
+
+  textureAssign(product:any, index:number){
+    this.colorToChoose = this.productDetailsService.getColorScheme(product, index);
+    console.log("COLOR: " , this.colorToChoose);
+    this.checkIfClear();
+  }
+
+  checkIfClear(){
+    this.canFinallyAdd = false;
+    if(this.colorToChoose !== ""){
+      this.canFinallyAdd = true;
+    }
+  }
 }
+
 
 
