@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { StarComponent } from './star/star.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StarComponent } from './star/star.component';
     ProductListComponent,
     ProductDetailsComponent,
     ContactUsComponent,
-    StarComponent
+    StarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

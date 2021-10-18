@@ -152,3 +152,22 @@ import {box-sizing: border-box;}
       text-decoration: none;
       color: rgba(0, 0, 0, 0.671);
   }
+
+  .btn-wishlist{
+    width: auto;
+    background-color: #f44336;
+    height: 50px;
+    width: 100%;
+    margin: 0.5em;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+/* for carousel */
+.container {
+    display: block;
+    height: 500px;
+    width: 500px;
+    padding: 2em;
+  }

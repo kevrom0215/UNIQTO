@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Input } from '@angular/core';
 import { ProductDetailsService } from '../product-details.service';
 import { ProductService } from '../product.service';
 import { CartService } from '../cart.service';
@@ -19,14 +19,13 @@ export class ProductListComponent implements OnInit, OnDestroy {
   // Stores the filtered product list here
   public productList: IProduct[] = [];
   public searchTerm: string | null = '';
-
-
   public prodToKeep: any = {};
   public averageRating : number = 0;
   public photoToChoose : string = "";
   public colorToChoose : string = "";
   public sizeToChoose : string = "";
   public canFinallyAdd : boolean = false;
+
 
   // Used to unsubscribe on page exit
   sub: Subscription = new Subscription;
@@ -83,6 +82,3 @@ export class ProductListComponent implements OnInit, OnDestroy {
     }
   }
 }
-
-
-

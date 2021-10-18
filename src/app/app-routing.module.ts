@@ -6,6 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [
       {path: 
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path: 'about-us', component: AboutUsComponent},
       {path: 'contact-us', component: ContactUsComponent},
       {path: '', redirectTo:'welcome', pathMatch:'full'},
-      {path: '**', component: ErrorPageComponent}
+      {path: '**', component: ErrorPageComponent},
+      {path: 'carousel', component: CarouselComponent}
 ];
 
 @NgModule({

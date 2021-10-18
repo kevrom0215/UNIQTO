@@ -1,13 +1,16 @@
-<!-- <p>product-list works!</p> -->
-<!-- PRODUCT CARDS -->
+<app-carousel></app-carousel>
+
 <div class = "displayarea">
-    <ng-container *ngIf="searchTerm==''; else customHeader">
+    <ng-container *ngIf="searchTerm==''; else customHeader">     
         <h1>ALL PRODUCTS</h1>
+        <!-- CAROUSELL -->
     </ng-container>
     <ng-template #customHeader>
         <h1>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</h1>
     </ng-template>
 </div>
+
+<!-- PRODUCT CARDS -->
 <div class="product-container">
     <ng-container *ngFor = "let product of productList">
     <div class="product-card">
@@ -18,47 +21,43 @@
             </a>
             
             <!-- for wishlist -->
-            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />
-            
+            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />  
         </div>
-            <div class="product-info">
-                <div class="color-option">
-                    <span class="color"></span>
-                    <div class="circles">
-                        <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
-                            <div class="color-seperator">
-                                <input class="button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
-                            </div>
+            
+        <div class="product-info">
+            <div class="color-option">
+                <span class="color"></span>
+                <div class="circles">
+                    <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
+                        <div class="color-seperator">
+                            <input class="button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
                         </div>
-                        <!--
-                        <span class="circle blue "  id="blue"></span>
-                        <span class="circle pink " id="pink"></span>
-                        <span class="circle yellow " id="yellow"></span> -->
                     </div>
                 </div>
-                <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-                    <h2 class="product-brand">{{product.productName}}</h2>
-                
-                    <p class="product-rating">Rating ({{product.productReviews.length}})</p>
-                    <span class="price">{{product.productPrice | currency: 'PHP' : 'symbol-narrow'}}</span>
-                </a>
             </div>
+            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                <h2 class="product-brand">{{product.productName}}</h2>
+                <p class="product-rating">Rating ({{product.productReviews.length}})</p>
+                <span class="price">{{product.productPrice | currency: 'PHP' : 'symbol-narrow'}}</span>
+            </a>
         </div>
+    </div>
 
         <!-- modal for wishlist -->
-        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn-wishlist">View Wishlist</button>
-                    </div>
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <button type="button" class="btn-wishlist">View Wishlist</button>
                 </div>
             </div>
         </div>
+    </div>
     </ng-container>
 </div>
 
