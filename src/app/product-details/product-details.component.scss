@@ -99,7 +99,9 @@ h3{
 
 button:hover{
     opacity: 3;
-    border: 1px solid black;
+}
+button:active{
+    border: 2px solid black;
 }
 
 .image_description{
@@ -228,7 +230,12 @@ input[type=image], select {
 #productoverview{
     margin-bottom: 10px;
 }
-
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
 
 
 

@@ -115,22 +115,22 @@
           </span>
         </div>    
       </div>
-      <div class = "button_sizes_container">
-        <button class = "button-size" (click)="sizeAssign('S')">S</button>
-        <button class = "button-size" (click)="sizeAssign('M')">M</button>
-        <button class = "button-size" (click)="sizeAssign('L')">L</button>
+      <div class = "button_sizes_container" (click)="onButtonGroupClick($event)">
+        <button class = "button-size" type = "button" (click)="sizeAssign('S')">S</button>
+        <button class = "button-size" type = "button" (click)="sizeAssign('M')">M</button>
+        <button class = "button-size" type = "button" (click)="sizeAssign('L')">L</button>
       </div>
       <div>
         <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd">ADD TO CART</button>
-        <button class = "add_to_wishlist">ADD TO WISHLIST</button>
+        <button class = "add_to_wishlist" disabled>ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
         <div>
           SHARE
         </div>
         <div>
-          <button id = "social_media"><img id="fblogo" src ="https://cdn-icons-png.flaticon.com/512/124/124010.png"></button>
-          <button id = "social_media"><img id="twitterlogo" src ="https://cdn-icons-png.flaticon.com/512/124/124021.png"></button>
+          <a href="https://www.facebook.com"><button id = "social_media"><img id="fblogo" src ="https://cdn-icons-png.flaticon.com/512/124/124010.png"></button></a>
+          <a href="https://www.twitter.com"><button id = "social_media"><img id="twitterlogo" src ="https://cdn-icons-png.flaticon.com/512/124/124021.png"></button></a>
         </div>
         </div>
     </div>
