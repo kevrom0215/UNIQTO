@@ -9,7 +9,7 @@
         </ul>
         <span class="d-flex">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (keydown.enter)="search()" aria-label="Search" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (keyup)="search()" aria-label="Search" aria-describedby="basic-addon1">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
             </div>
         </span>
