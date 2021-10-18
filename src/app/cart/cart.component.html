@@ -104,21 +104,21 @@
                             <tbody>
                                 <tr>
                                     <td>item(s) subtotal</td>
-                                    <td><span class="price-results">{{grandTotal}}</span></td>
+                                    <td><span class="price-results">{{grandTotal | currency:"PHP ":"symbol":"1.2-2"}}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="bigger-font"><strong>SUBTOTAL</strong></td>
-                                    <td><span class="price-results bigger-font"><strong>{{grandTotal}}</strong></span></td>
+                                    <td><span class="price-results bigger-font"><strong>{{grandTotal | currency:"PHP ":"symbol":"1.2-2"}}</strong></span></td>
                                 </tr>
                                 <tr>
                                     <td>VAT included</td>
-                                    <td><span class="price-results">{{vatPrice}}</span></td>
+                                    <td><span class="price-results">{{vatPrice | currency:"PHP ":"symbol":"1.2-2"}}</span></td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <th class="bigger-font"><strong>ORDER TOTAL</strong></th>
-                                    <th class="price-results bigger-font" >{{grandTotal}}</th>
+                                    <th class="price-results bigger-font" >{{grandTotal | currency:"PHP ":"symbol":"1.2-2"}}</th>
                                 </tr>
                             </tfoot>
                         </table>
