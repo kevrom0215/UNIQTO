@@ -71,7 +71,7 @@
       </div>
       <div class = "price_and_review_container">
         <!--product_price-->
-        <h1 id= "product_price">PHP {{product.productPrice}}</h1> 
+        <h1 id= "product_price">{{ product.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</h1> 
         <div class="star-container">
         <!-- <ng-container *ngFor = "let review of product.productReviews">
           <span id="star">&starf;</span>
