@@ -90,8 +90,8 @@
 		"productName": "Kids Airism Cotton Blend Short Sleeve Set",
 		"productPrice": 790,
 		"productImage": [
-			"./assets/images/goods_55_434613.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_434613_sub13.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_55_434613.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_434613_sub18.jpg?width=1600&impolicy=quality_75",
 			"./assets/images/goods_434613_sub19.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_434613_sub20.jpg?width=1600&impolicy=quality_75",
@@ -167,10 +167,11 @@
 		"productName": "Women Ultra Light Down Parka",
 		"productPrice": 3990,
 		"productImage": [
-			"./assets/images/goods_42_429454.webp?width=1600&impolicy=quality_75",
+			
 			"./assets/images/goods_07_429454.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_09_429454.webp?width=1600&impolicy=quality_75",
-			"./assets/images/goods_12_429454.webp?width=1600&impolicy=quality_75"
+			"./assets/images/goods_12_429454.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_42_429454.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
 			"schemeName":[
