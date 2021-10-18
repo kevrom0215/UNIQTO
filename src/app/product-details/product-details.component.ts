@@ -85,14 +85,5 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
 
-  onButtonGroupClick($event:any){
-    let clickedElement = $event.target || $event.srcElement;
-    if( clickedElement.nodeName === "BUTTON" ) {
-
-      let isCertainButtonAlreadyActive = clickedElement.parentElement.querySelector(".active");
-      // if a Button already has Class: .active
-
-      clickedElement.className += " active";
-    }
-  }
+  
 }

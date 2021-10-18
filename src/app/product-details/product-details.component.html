@@ -123,10 +123,10 @@
           </span>
         </div>    
       </div>
-      <div class = "button_sizes_container" (click)="onButtonGroupClick($event)">
-        <button class = "button-size" type = "button" (click)="sizeAssign('S')">S</button>
-        <button class = "button-size" type = "button" (click)="sizeAssign('M')">M</button>
-        <button class = "button-size" type = "button" (click)="sizeAssign('L')">L</button>
+      <div class="button_sizes_container" role="group">
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('S')">S</button>
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('M')">M</button>
+        <button type="button" class="btn btn-secondary" (click) = "sizeAssign('L')">L</button>
       </div>
       <div class="flex-buttons">
         <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD TO CART</button>
@@ -143,6 +143,7 @@
         </div>
     </div>
 </div>
+
 
 
 <!-- Modal -->
