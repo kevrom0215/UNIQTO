@@ -1,25 +1,29 @@
 #contact-us{
-    padding: 16px;
+    background-color:#AEE6F2;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
 }
 
 #floatingTextArea{
-    height: 100px
+    height: 100px;
+    width: 500px;
+    justify-content: left;
 }
 
-.heading{
-    background-color: #F2D4AE;
-    padding-top: 10%;
-    margin-top: -50px;
-    width: 100%;
-    margin-bottom: 5rem;
-    padding-left: 5%;
-    padding-bottom: 1%;
-}
+
 .imagecontainer{
-    width: 100%;
+    width: auto;
+    height: 500px;
     display: flex;
     justify-content: center;
 }
 h2{
     font-weight: bolder;
+}
+.maindiv{
+    padding-top:10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
