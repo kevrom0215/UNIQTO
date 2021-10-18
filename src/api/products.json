@@ -167,7 +167,6 @@
 		"productName": "Women Ultra Light Down Parka",
 		"productPrice": 3990,
 		"productImage": [
-			
 			"./assets/images/goods_07_429454.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_09_429454.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_12_429454.webp?width=1600&impolicy=quality_75",
@@ -201,9 +200,10 @@
 		"productName": "WOMEN U CREW NECK SHORT SLEEVE T-SHIRT",
 		"productPrice": 590,
 		"productImage": [
-			"./assets/images/goods_21_424873.webp?width=1600&impolicy=quality_75",
+			
 			"./assets/images/goods_24_424873.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_37_424873.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_21_424873.webp?width=1600&impolicy=quality_75",
 			"./assets/images/goods_51_424873.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
