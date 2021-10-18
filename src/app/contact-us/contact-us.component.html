@@ -1,66 +1,75 @@
-<div class="row justify-content-center" id="contact-us">
-  <div class="col-lg-5">
-    <h2 class="fw-bolder">Get in touch</h2>
-    <p class="lead mb-0">We'd love to hear from you!</p>
-    <form [formGroup]="myForm">
-      <!-- Name -->
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="fullName" placeholder="Full Name" formControlName="fullName">
-        <label for="fullName">Name</label>
-      </div>
-      <!-- Validation -->
-      <p class="text-danger" *ngIf="fullName?.touched && !fullName?.valid">
-        <span *ngIf="fullName?.errors?.required">
-          A name is required.
-        </span>
-      </p>
 
-      <!-- Email -->
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="email" placeholder="E-mail" formControlName="email">
-        <label for="email">Email Address</label>
-      </div>
-      <!-- Validation -->
-      <p class="text-danger" *ngIf="email?.touched && !email?.valid">
-        <span *ngIf="email?.errors?.required">
-          An email address is required.
-        </span>
-        <span *ngIf="email?.errors?.email">
-          Not a valid email address.
-        </span>
-      </p>
+<div class="maindiv">
+  <div class="imagecontainer">
+    <img src="https://www.getmailbird.com/wp-content/uploads/2019/12/Keep-in-touch-email-templates.jpg">
+  </div>
+  <div class="row justify-content-left" id="contact-us">
+  
+    <div class = "heading">
+      <h2>Get in touch</h2>
+      <p>We'd love to hear from you!</p>
+    </div>
+    <div class="col-lg-5">
+      <form [formGroup]="myForm">
+        <!-- Name -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="fullName" placeholder="Full Name" formControlName="fullName">
+          <label for="fullName">Name</label>
+        </div>
+        <!-- Validation -->
+        <p class="text-danger" *ngIf="fullName?.touched && !fullName?.valid">
+          <span *ngIf="fullName?.errors?.required">
+            A name is required.
+          </span>
+        </p>
 
-      <!-- Phone Number -->
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber">
-        <label for="phoneNumber">Phone Number</label>
-      </div>
-      <!-- Validation -->
-      <p class="text-danger" *ngIf="phoneNumber?.touched && !phoneNumber?.valid">
-        <span *ngIf="phoneNumber?.errors?.required">
-          A phone number is required.
-        </span>
-        <span *ngIf="phoneNumber?.errors?.pattern">
-          Not a valid phone number.
-        </span>
-      </p>
-
-      <!-- Message -->
-      <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="Leave a message here" id="floatingTextArea"  formControlName="message"></textarea>
-        <label for="floatingTextArea">Message</label>
-      </div>
-      <!-- Validation -->
-      <p class="text-danger" *ngIf="message?.touched && !message?.valid">
-        <span *ngIf="message?.errors?.required">
-          A message is required.
-        </span>
-      </p>
-
-      <!-- Submit button; Disabled if any form returns invalid; Calls onSubmit() if clicked -->
-      <div class="d-grid">
-        <button type="button" class="btn btn-outline-primary" (click)='onSubmit()' [disabled]="!myForm.valid">Submit</button>
-      </div>
-    </form>
+        <!-- Email -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="email" placeholder="E-mail" formControlName="email">
+          <label for="email">Email Address</label>
+        </div>
+        <!-- Validation -->
+        <p class="text-danger" *ngIf="email?.touched && !email?.valid">
+          <span *ngIf="email?.errors?.required">
+            An email address is required.
+          </span>
+          <span *ngIf="email?.errors?.email">
+            Not a valid email address.
+          </span>
+        </p>
+  
+        <!-- Phone Number -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber">
+          <label for="phoneNumber">Phone Number</label>
+        </div>
+        <!-- Validation -->
+        <p class="text-danger" *ngIf="phoneNumber?.touched && !phoneNumber?.valid">
+          <span *ngIf="phoneNumber?.errors?.required">
+            A phone number is required.
+          </span>
+          <span *ngIf="phoneNumber?.errors?.pattern">
+            Not a valid phone number.
+          </span>
+        </p>
+  
+        <!-- Message -->
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Leave a message here" id="floatingTextArea"  formControlName="message"></textarea>
+          <label for="floatingTextArea">Message</label>
+        </div>
+        <!-- Validation -->
+        <p class="text-danger" *ngIf="message?.touched && !message?.valid">
+          <span *ngIf="message?.errors?.required">
+            A message is required.
+          </span>
+        </p>
+  
+        <!-- Submit button; Disabled if any form returns invalid; Calls onSubmit() if clicked -->
+        <div class="d-grid">
+          <button type="button" class="btn btn-outline-primary" (click)='onSubmit()' [disabled]="!myForm.valid">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
