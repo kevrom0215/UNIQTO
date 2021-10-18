@@ -61,7 +61,7 @@ export class ProductDetailsComponent implements OnInit {
     };
     this.cartService.addtoCart(myCustomObject);
     // this.successfulAdditon = false;
-    alert("Item added to cart");
+    // alert("Item added to cart");
     
   }
 

@@ -1,10 +1,11 @@
 @import url(https://db.onlinewebfonts.com/c/13bf1d3e6c7119293f9c96e5678096e6?family=Uniqlo+Pro+Light);
-div{
-    display: flex;
+// div{
+//     display: flex;
     
-}
+// }
 @font-face {font-family: "Uniqlo Pro Light"; src: url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.eot"); src: url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.woff") format("woff"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/13bf1d3e6c7119293f9c96e5678096e6.svg#Uniqlo Pro Light") format("svg"); }
 .main_div{
+    display:flex;
     flex-direction: row;
     justify-content: center;
 }
@@ -18,6 +19,11 @@ div{
     cursor: pointer;
     border: none;
 }
+
+.image_description { 
+    display:flex;
+}
+
 .image_container{
     justify-content: center;
     margin-top: 10%;
@@ -37,6 +43,7 @@ h1{
     width: 100%;
 }
 .product_specs{
+    display:flex;
     flex-direction: column;
     position:-webkit-sticky;
     position: sticky;
@@ -235,6 +242,14 @@ button[disabled]{
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+
+.flex-buttons { 
+    display:flex;
+}
+
+.flex-textures { 
+    display:flex;
 }
 
 

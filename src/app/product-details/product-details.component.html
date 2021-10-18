@@ -68,6 +68,10 @@
       </ng-container>       
       </div><!--closing review container-->
     </div>  
+
+
+
+
   </div>
     <div class = "product_specs">
       <div class="added-to-cart-message">
@@ -104,7 +108,7 @@
             CHOOSE YOUR COLOR:
           </span>
         </div>
-        <div>
+        <div class="flex-textures">
           <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
             <div class="color-seperator">
               <input class = "button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
@@ -124,8 +128,8 @@
         <button class = "button-size" type = "button" (click)="sizeAssign('M')">M</button>
         <button class = "button-size" type = "button" (click)="sizeAssign('L')">L</button>
       </div>
-      <div>
-        <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" routerLink="/cart">ADD TO CART</button>
+      <div class="flex-buttons">
+        <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD TO CART</button>
         <button class = "add_to_wishlist">ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
@@ -140,6 +144,25 @@
     </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><strong>NICEE ONE!</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your item has successfully added to your cart :D
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" routerLink="/" data-bs-dismiss="modal">Continue Shopping</button>
+        <button type="button" class="btn btn-primary" routerLink="/cart" data-bs-dismiss="modal">Go to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
