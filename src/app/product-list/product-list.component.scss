@@ -19,8 +19,8 @@ import {box-sizing: border-box;}
 }
 .product-card{
     flex: 0 0 auto;
-    width: 250px;
-    height: 500px;
+    width:20%;
+    height: fit-content;
     border-radius: 12px;
     border: solid 1px rgba(128, 128, 128, 0.61);
     margin-right: 40px;
@@ -36,13 +36,13 @@ import {box-sizing: border-box;}
 .product-image{
     position: relative;
     width: 100%;
-    height: 300px;
+    height: auto;
     
 }
 
 .product-thumb{
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -139,7 +139,7 @@ import {box-sizing: border-box;}
   }
 
   h2{
-      font-size: 15px;
+      font-size: 20px;
       font-weight:bolder;
   }
   .circles{
@@ -167,5 +167,10 @@ import {box-sizing: border-box;}
     height: 500px;
     width: 500px;
     padding: 2em;
+  }
+
+  *{
+      text-decoration: none;
+      color:black;
   }
 
