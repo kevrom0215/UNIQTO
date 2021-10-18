@@ -222,7 +222,12 @@ input[type=image], select {
 .color-seperator {
     margin:3px;
 }
-
+.product_overview{
+    flex-direction: column;
+}
+#productoverview{
+    margin-bottom: 10px;
+}
 
 
 
