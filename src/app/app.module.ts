@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { StarComponent } from './star/star.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     ProductDetailsComponent,
     ContactUsComponent,
     StarComponent,
-    CarouselComponent
+    CarouselComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

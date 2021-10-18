@@ -1,9 +1,8 @@
-<app-carousel></app-carousel>
+<app-carousel></app-carousel> 
 
 <div class = "displayarea">
-    <ng-container *ngIf="searchTerm==''; else customHeader">     
+    <ng-container *ngIf="searchTerm==''; else customHeader">    
         <h1>ALL PRODUCTS</h1>
-        <!-- CAROUSELL -->
     </ng-container>
     <ng-template #customHeader>
         <h1>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</h1>
@@ -21,9 +20,10 @@
             </a>
             
             <!-- for wishlist -->
-            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />  
-        </div>
+            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />
             
+        </div>
+        
         <div class="product-info">
             <div class="color-option">
                 <span class="color"></span>
@@ -43,7 +43,9 @@
         </div>
     </div>
 
-        <!-- modal for wishlist -->
+    <!--test button-->
+   
+    <!-- modal for wishlist -->
     <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -51,17 +53,8 @@
                     <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist!</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                
-                <div class="modal-body">
-                    <button type="button" class="btn-wishlist">View Wishlist</button>
-                </div>
             </div>
         </div>
     </div>
     </ng-container>
 </div>
-
-
-
-
-

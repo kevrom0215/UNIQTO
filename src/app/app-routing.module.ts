@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
       {path: 
@@ -22,7 +23,8 @@ const routes: Routes = [
       {path: 'contact-us', component: ContactUsComponent},
       {path: '', redirectTo:'welcome', pathMatch:'full'},
       {path: '**', component: ErrorPageComponent},
-      {path: 'carousel', component: CarouselComponent}
+      {path: 'carousel', component: CarouselComponent},
+      {path: 'wishlist', component: WishlistComponent}
 ];
 
 @NgModule({

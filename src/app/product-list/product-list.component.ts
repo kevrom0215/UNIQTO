@@ -3,6 +3,7 @@ import { ProductDetailsService } from '../product-details.service';
 import { ProductService } from '../product.service';
 import { CartService } from '../cart.service';
 
+
 // Imports for navbar search function
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from '../iproduct';
@@ -57,6 +58,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       chosenColor: this.colorToChoose
     };
     //this.cartService.addToWishlist(myCustomObject);
+    this.canFinallyAdd = false;
   }
 
   revealProduct(item: any){
