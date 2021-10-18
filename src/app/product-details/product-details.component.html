@@ -111,7 +111,11 @@
         <div class="flex-textures">
           <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
             <div class="color-seperator">
-              <input class = "button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
+              <!-- <input class = "button-color sorting-button texture-button" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))" > -->
+              <!-- radio experiment -->
+              <input class="disappear" type="radio" id="{{colors}}" name="radioFruit" value="apple">
+              <label class="new-box" for="{{colors}}" style="background: url({{colors}}) left center no-repeat" (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))"></label>
+              <!-- until here -->
             </div>
           </div>
         </div>
@@ -124,9 +128,9 @@
         </div>    
       </div>
       <div class = "button_sizes_container" (click)="onButtonGroupClick($event)">
-        <button class = "button-size" type = "button" (click)="sizeAssign('S')">S</button>
-        <button class = "button-size" type = "button" (click)="sizeAssign('M')">M</button>
-        <button class = "button-size" type = "button" (click)="sizeAssign('L')">L</button>
+        <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('S')" [ngClass]="isSActive ? 'picked' : 'notPicked'">S</button>
+        <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('M')" [ngClass]="isMActive ? 'picked' : 'notPicked'">M</button>
+        <button class = "button-size sorting-button" type = "button" (click)="sizeAssign('L')" [ngClass]="isLActive ? 'picked' : 'notPicked'">L</button>
       </div>
       <div class="flex-buttons">
         <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD TO CART</button>
@@ -134,7 +138,7 @@
       </div>
       <div class="share_container">
         <div>
-          SHARE
+          SHARE:
         </div>
         <div>
           <a href="https://www.facebook.com"><button id = "social_media"><img id="fblogo" src ="https://cdn-icons-png.flaticon.com/512/124/124010.png"></button></a>
@@ -163,6 +167,7 @@
     </div>
   </div>
 </div>
+
 
 
 

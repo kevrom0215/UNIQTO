@@ -30,6 +30,10 @@ export class ProductDetailsComponent implements OnInit {
   public sizeToChoose : string = "";
   public canFinallyAdd : boolean = false;
   public successfulAdditon : boolean = true;
+  public isSActive : boolean = false;
+  public isMActive : boolean = false;
+  public isLActive : boolean = false;
+
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     
@@ -47,7 +51,11 @@ export class ProductDetailsComponent implements OnInit {
     //   this.product = res;
     // })
 
+    
+
     this.averageRating = this.productDetailsService.getAverageStars(this.product);
+    // let allInputButtons = document.getElementsByClassName("texture-button") as HTMLCollectionOf<HTMLInputElement>;
+    // console.log(allInputButtons[0]);
   }
 
   addToCart(){
@@ -62,20 +70,32 @@ export class ProductDetailsComponent implements OnInit {
     this.cartService.addtoCart(myCustomObject);
     // this.successfulAdditon = false;
     // alert("Item added to cart");
-    
   }
 
   textureAssign(product:any, index:number){
     this.colorToChoose = this.productDetailsService.getColorScheme(product, index);
     this.photoToChoose = this.productDetailsService.getProperPhoto(product, index);
-    console.log("COLOR: " , this.colorToChoose);
-    console.log("URL: ", this.photoToChoose);
+    // console.log("COLOR: " , this.colorToChoose);
+    // console.log("URL: ", this.photoToChoose);
     this.checkIfClear();
   }
 
   sizeAssign(size: string){
     this.sizeToChoose = size;
     console.log("SIZE: ", this.sizeToChoose);
+    if(this.sizeToChoose === "S"){
+      this.isSActive = true;
+      this.isMActive = false;
+      this.isLActive = false;
+    }else if (this.sizeToChoose === "M"){
+      this.isMActive = true;
+      this.isSActive = false;
+      this.isLActive = false;
+    }else if (this.sizeToChoose === "L"){
+      this.isLActive = true;
+      this.isSActive = false;
+      this.isMActive = false;
+    }
     this.checkIfClear();
   }
 
