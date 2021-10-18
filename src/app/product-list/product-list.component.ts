@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, Input } from '@angular/core';
 import { ProductDetailsService } from '../product-details.service';
 import { ProductService } from '../product.service';
-import { CartService } from '../cart.service';
+import { WishlistService } from '../wishlist.service';
 
 
 // Imports for navbar search function
@@ -14,6 +14,8 @@ import { Subscription } from 'rxjs';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
+
+
 export class ProductListComponent implements OnInit, OnDestroy {
   // Stores the product list here
   public productListRaw: IProduct[] = [];
@@ -31,13 +33,14 @@ export class ProductListComponent implements OnInit, OnDestroy {
   // Used to unsubscribe on page exit
   sub: Subscription = new Subscription;
 
-  constructor(private product: ProductService, private productDetailsService: ProductDetailsService, private cartService: CartService, private route: ActivatedRoute) { }
+  constructor(private product: ProductService, private productDetailsService: ProductDetailsService, private wishlistService: WishlistService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.product.getProducts()
       .subscribe(res=>{
         this.productListRaw = res;
         this.productList = this.productListRaw;
+      
         // Subscribe to the route.params for filtering
         this.route.params.subscribe(params => {
           if (params.searchTerm){
@@ -53,11 +56,12 @@ export class ProductListComponent implements OnInit, OnDestroy {
     })
   }
 
-  addToWishlist(){
-    let myCustomObject : object = {
-      chosenColor: this.colorToChoose
-    };
-    //this.cartService.addToWishlist(myCustomObject);
+  addToWishlist(item: any){
+    //let myCustomObject : object = {
+      //chosenID: this.product.index,
+    //  chosenColor: this.colorToChoose
+    //};
+    this.wishlistService.addToWishlistItem(item);
     this.canFinallyAdd = false;
   }
 

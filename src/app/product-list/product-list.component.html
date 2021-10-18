@@ -20,7 +20,7 @@
             </a>
             
             <!-- for wishlist -->
-            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist() [disabled]="!canFinallyAdd" value="Add to Wishlist" />
+            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist(product) [disabled]="!canFinallyAdd" value="Add to Wishlist" />
             
         </div>
         
@@ -53,6 +53,9 @@
                     <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist!</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" routerLink="/wishlist">View Wishlist</button>
+                  </div>
             </div>
         </div>
     </div>
