@@ -133,14 +133,6 @@ h1, h2, h3, h4, h5,
 		}
 	}
 }
-
-.btn.btn-danger{
-	margin: 10px;
-	align-items: center;
-}
-
-
-
 .footer-height{
 	height: 60vh;
 	.empty-container{
@@ -231,4 +223,9 @@ h1, h2, h3, h4, h5,
   input:checked ~ .checkmark:after {
 	  color: $primary;
 	}
+}
+.buttonprmy{
+    background-color: #FF0000 !important;
+    color: white !important;
+	margin-right: 5px;
 }
