@@ -109,7 +109,6 @@
 }
 
 .price{
-    position: absolute;
     bottom: 0;
     left: 0;
     font-weight: 900;
@@ -207,7 +206,8 @@
 
   .deets {
     position:relative;
-    height: 120px;
+    height:fit-content;
+    min-height: 120px;
   }
 
 

@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   public pendingItem : any={};
   public grandTotal !: number;
   public vatPrice : number = 0;
+  public removedAllItems: boolean = false;
 
   constructor(private cartService : CartService) { }
 
@@ -25,6 +26,7 @@ export class CartComponent implements OnInit {
       this.grandTotal = this.cartService.getTotalPrice();
       this.vatPrice = this.grandTotal * 0.1071442
     })
+    this.removedAllItems= false;
   }
 
   removeItem(item: any){
@@ -35,5 +37,9 @@ export class CartComponent implements OnInit {
   pendingForRemoval(item:any){
     this.pendingItem = item;
     console.log(this.pendingItem.productID);
+  }
+  removeAllItems(){
+    this.cartService.removeAll();
+    this.removedAllItems = true;
   }
 }

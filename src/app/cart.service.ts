@@ -60,4 +60,8 @@ export class CartService {
     }
     this.productList.next(this.cartItemList);
   }
+  removeAll() {
+    this.cartItemList = []
+    this.productList.next(this.cartItemList);
+  }
 }

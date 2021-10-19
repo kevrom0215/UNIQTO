@@ -10,7 +10,8 @@
                 <ol class="pad-left-remove">
                     <ng-container *ngIf="products.length==0">
                         <div class="container empty">
-                            <h3 class="empty-message">Whaat?? Your cart is currently empty... Click the button below to continue shopping</h3>
+                            <h3 class="empty-message">Whatt?? Your cart is currently empty... Click the button below to continue shopping</h3>
+                            <h3 class="empty-message" *ngIf = "removedAllItems">Items removed from cart</h3>
                             <div class="empty-button">
                                 <button class="btn btn-primary checkout-button" type="button" routerLink="/welcome">CONTINUE SHOPPING</button>
                             </div>
@@ -146,6 +147,7 @@
                 <div class="checkout-section">
                     <button class="btn btn-dark checkout-button" type="button">CHECKOUT</button>
                     <button class="btn btn-primary checkout-button" type="button" *ngIf="products.length!=0" routerLink="/welcome">CONTINUE SHOPPING</button>
+                    <button class="btn btn-danger checkout-button" type="button" id="removeallitems" (click)="removeAllItems()">REMOVE ALL ITEMS</button>
                 </div>
             </div>
         </div>

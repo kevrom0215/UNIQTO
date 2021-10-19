@@ -9,4 +9,10 @@ button{
     opacity: 0.8;
     font-size: inherit;
 }
-
+button:hover{
+    opacity: 1;
+}
+.btn{
+    border: none !important;
+    outline: none !important;
+}
