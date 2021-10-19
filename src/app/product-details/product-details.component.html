@@ -136,7 +136,7 @@
       </div>
       <div class="flex-buttons">
         <button class= "add_to_cart" (click) = addToCart() [disabled]="!canFinallyAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD TO CART</button>
-        <button class = "add_to_wishlist">ADD TO WISHLIST</button>
+        <button class = "add_to_wishlist" (click) = addToWishlist(product)>ADD TO WISHLIST</button>
       </div>
       <div class="share_container">
         <div>
@@ -170,10 +170,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-

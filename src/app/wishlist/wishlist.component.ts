@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WishlistService } from '../wishlist.service';
 import { CartService } from '../cart.service';
+import { ProductDetailsService } from '../product-details.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -14,7 +15,12 @@ export class WishlistComponent implements OnInit {
   public products : any=[];
 
   //from prod details
-  public prodToKeep: any = {};
+  public prodToKeep: any = {
+    productID: 0,
+    productName: '',
+    productPrice: 0,
+    chosenPhoto: ''
+  };
   public averageRating : number = 0;
   public photoToChoose : string = "";
   public colorToChoose : string = "";
@@ -25,7 +31,7 @@ export class WishlistComponent implements OnInit {
   public isMActive : boolean = false;
   public isLActive : boolean = false;
 
-  constructor(private wishlistService : WishlistService, private cartService: CartService) { }
+  constructor(private wishlistService : WishlistService, private cartService: CartService, private productDetailsService : ProductDetailsService) { }
 
   ngOnInit(): void {
     this.wishlistService.getProducts()
@@ -43,9 +49,13 @@ export class WishlistComponent implements OnInit {
     this.wishlistService.removeAll();
   }
 
-  addToCart(item: any){
-    this.cartService.addtoCart(item);
-    console.log(item);
+  //for adding items to cart
+  addToCart(item: any){ 
+    this.prodToKeep.productID = item.productID;
+    this.prodToKeep.productName =  item.productName;
+    this.prodToKeep.productPrice = item.productPrice;
+    this.prodToKeep.chosenPhoto = item.productImage[0];
+    this.cartService.addtoCart(this.prodToKeep);
+    console.log(this.prodToKeep);
   }
-
 }

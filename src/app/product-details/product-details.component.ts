@@ -4,6 +4,7 @@ import { ProductService } from '../product.service';
 import { ProductDetailsService } from '../product-details.service';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { CartService } from '../cart.service';
+import { WishlistService } from '../wishlist.service';
 
 @Component({
   selector: 'app-product-details',
@@ -37,7 +38,7 @@ export class ProductDetailsComponent implements OnInit {
   
   // constructor(private productDetailsService : ProductDetailsService) {}
     
-  constructor(private productDetailsService : ProductDetailsService, private cartService: CartService, private _route:ActivatedRoute) {}
+  constructor(private productDetailsService : ProductDetailsService, private cartService: CartService, private wishlistService: WishlistService, private _route:ActivatedRoute) {}
 
   
 
@@ -56,6 +57,16 @@ export class ProductDetailsComponent implements OnInit {
     this.averageRating = this.productDetailsService.getAverageStars(this.product);
     // let allInputButtons = document.getElementsByClassName("texture-button") as HTMLCollectionOf<HTMLInputElement>;
     // console.log(allInputButtons[0]);
+  }
+
+  //for adding to wishlist
+  addToWishlist(item: any){
+    //let myCustomObject : object = {
+      //chosenID: this.product.index,
+    //  chosenColor: this.colorToChoose
+    //};
+    this.wishlistService.addToWishlistItem(item);
+    this.canFinallyAdd = false;
   }
 
   addToCart(){
