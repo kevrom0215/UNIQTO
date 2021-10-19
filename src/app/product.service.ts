@@ -25,13 +25,6 @@ export class ProductService {
     );
   }
 
-  // Get the 1 product for product-detail page using id
-  getProduct(id: number): Observable<IProduct | undefined> {
-    return this.getProducts().pipe(
-        map((products: IProduct[]) => products.find(p => p.productID === id))
-    );
-  }
-
   // Handling error when calling the http get method
   private handleError(err: HttpErrorResponse){
     let errorMessage = '';

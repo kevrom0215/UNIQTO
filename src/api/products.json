@@ -1,6 +1,7 @@
 [
 	{
 		"productID": 441647,
+		"productCategory": "MEN",
 		"productName": "Easy Care Comfort Striped Long Sleeve Shirt",
 		"productPrice": 1290,
 		"productImage": [
@@ -43,6 +44,7 @@
 	},
 	{
 		"productID": 441743,
+		"productCategory": "MEN",
 		"productName": "STRETCH SELVEDGE SLIM FIT JEANS",
 		"productPrice": 1990,
 		"productImage": [
@@ -87,6 +89,7 @@
 	},
 	{
 		"productID": 434613,
+		"productCategory": "KIDS",
 		"productName": "Kids Airism Cotton Blend Short Sleeve Set",
 		"productPrice": 790,
 		"productImage": [
@@ -118,6 +121,7 @@
 	},
 	{
 		"productID": 434148,
+		"productCategory": "KIDS",
 		"productName": "Kids Ultra Stretch Dry Sweat Hoodie",
 		"productPrice": 990,
 		"productImage": [
@@ -164,6 +168,7 @@
 	},
 	{
 		"productID": 429454,
+		"productCategory": "WOMEN",
 		"productName": "Women Ultra Light Down Parka",
 		"productPrice": 3990,
 		"productImage": [
@@ -180,10 +185,10 @@
 				"30 NATURAL"
 			],
 			"schemeLink":[
-				"./assets/images/goods_07_429454_chip.webp",
-				"./assets/images/goods_09_429454_chip.webp",
-				"./assets/images/goods_12_429454_chip.webp",
-				"./assets/images/goods_30_429454_chip.webp"
+				"./assets/images/goods_07_429454_chip.webp?width=1600&impolicy=quality_75",
+				"./assets/images/goods_09_429454_chip.webp?width=1600&impolicy=quality_75",
+				"./assets/images/goods_12_429454_chip.webp?width=1600&impolicy=quality_75",
+				"./assets/images/goods_30_429454_chip.webp?width=1600&impolicy=quality_75"
 			]	
 		}],
 		"productOverview": "Ultra-light, ultra-warm. Our sleek, no-bulk parka. Durable water-repellent coating. Pocketable design in a compact size for easy carrying. Anti-static lining. Versatile matte finish. Hood stoppers are now inside for a more stylish look. Pocketable design can be stored in the carrying pouch. Carrying pouch attaches to inside loop on the left.",
@@ -197,6 +202,7 @@
 	},
 	{
 		"productID": 435193,
+		"productCategory": "WOMEN",
 		"productName": "WOMEN U CREW NECK SHORT SLEEVE T-SHIRT",
 		"productPrice": 590,
 		"productImage": [
@@ -256,6 +262,7 @@
 	},
 	{
 		"productID": 441799,
+		"productCategory": "WOMEN",
 		"productName": "JERSEY RELAXED JACKET",
 		"productPrice": 1490,
 		"productImage": [
@@ -311,6 +318,7 @@
 	},
 	{
 		"productID": 443620,
+		"productCategory": "MEN",
 		"productName": "WINDPROOF FLUFFY YARN FLEECE FULL-ZIP HOODIE",
 		"productPrice": 1990,
 		"productImage": [
@@ -354,6 +362,80 @@
 				"userRating": 2,
 				"userReview": "This jacket was bought for my brother to bring to Canada. He had a convenient time carrying it in the plane as it was light yet warm",
 				"reviewDate": "9/11/2021"
+			}
+		]
+	},
+	{
+		"productID": 442314,
+		"productCategory": "MEN",
+		"productName": "CHINO SHORTS",
+		"productPrice": 990,
+		"productImage": [
+			"./assets/images/phgoods_441246_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_26_441246.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub6.webp?width=1600&impolicy=quality_75"
+		],
+		"productScheme": [{
+			"schemeName":[
+				"08 DARK GRAY",
+				"09 BLACK",
+				"26 ORANGE",
+				"32 BEIGE"
+			],
+			"schemeLink":[
+				"./assets/images/goods_08_441246_chip.jpg",
+				"./assets/images/goods_09_441246_chip.webp",
+				"./assets/images/goods_26_441246_chip.jpg",
+				"./assets/images/goods_32_441246_chip.jpg"
+			]	
+		}],
+		"productOverview": " Enjoy the unique texture of chinos. In a relaxed cut.",
+		"productDescription": "Finely brushed cotton twill fabric with a special dyeing and washing process for a distinctive texture. Comfortable and soft to the touch.Double-stitched on the sides for a more casual design. Generous cut from the thigh down to the hem, so they pair well with loose-fitting tops.Carefully designed details including a coin pocket and chambray piping inside the waist. Sleek knee-length cut.",
+		"productReviews": [{
+				"username": "Caplui",
+				"userRating": 4,
+				"userReview": "I'M QUITE SATISFIED WITH THIS ITEM WHICH IS SUITABLE FOR ME DURING THE SUMMER MONTHS WHILE WORKING ON BOARD SHIP",
+				"reviewDate": "9/9/2021"
+			}
+		]
+	},
+	{
+		"productID": 321345,
+		"productCategory": "",
+		"productName": "AIRISM MASK (3PACK)",
+		"productPrice": 490,
+		"productImage": [
+			"./assets/images/goods_03_437784.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_09_437784.webp?width=1600&impolicy=quality_75"
+		],
+		"productScheme": [{
+			"schemeName":[
+				"00 WHITE",
+				"03 GRAY",
+				"09 BLACK"
+			],
+			"schemeLink":[
+				"./assets/images/goods_00_437784_chip.webp",
+				"./assets/images/goods_03_437784_chip.webp",
+				"./assets/images/phgoods_09_437784_chip.webp"				
+			]	
+		}],
+		"productDescription": " High-performance filter keeps you dry from splashes. Washable AIRism mask. Evolved design to be easier to breath in. (NO RETURN/ NO EXCHANGE UNLESS DAMAGED OR DEFECTIVE)",
+		"productOverview": "High-performance 3-tier structure. First layer of AIRism Mesh is smooth and highly breathable. Second layer cuts up to 99 of particles such as bacteria and pollen. Third layer uses the same AIRism Mesh as the first layer for improved breathability.",
+		"productReviews": [{
+				"username": "AMYY",
+				"userRating": 5,
+				"userReview": "The quality is superb. Breathable and soft mask. Not harsh to the face, so not to aggravate maskne. Thanks uniqlo <3",
+				"reviewDate": "10/17/2021"
+			},
+			{
+				"username": "deanne",
+				"userRating": 5,
+				"userReview": "It has a great material. Breathable and it's soft against the skin. I have a sensitive skin and this does not irritate my skin so I love it. Will definitely buy it again after my masks become worked out. Thank you Uniqlo!",
+				"reviewDate": "10/13/2021"
 			}
 		]
 	}

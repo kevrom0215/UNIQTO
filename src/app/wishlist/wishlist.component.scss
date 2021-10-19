@@ -3,7 +3,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 $font-primary: 'Poppins',Arial, sans-serif;
-$primary: #99b19c;
+$primary: pink;
 //$color: black;
 body{
 	font-family: $font-primary;
@@ -81,8 +81,8 @@ h1, h2, h3, h4, h5,
 			font-weight: 500;
 			color: white;
 		}
-		tr{
-		}
+		//tr{
+		//}
 	}
 	tbody{
 		tr{
@@ -123,6 +123,40 @@ h1, h2, h3, h4, h5,
             }
         
 		}
+	}
+}
+
+
+
+.footer-height{
+	height: 60vh;
+	.empty-container{
+		position: relative;
+		.center{
+			margin-top: 200px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			//h4, 
+			h6{
+				position: absolute;
+				//top: 50%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				padding: 20px;
+				margin-bottom: 100px;
+			} 
+			
+			button{
+				display: block;
+				margin-left: auto;
+				margin-right: auto
+			}
+		}
+		
 	}
 }
 
@@ -179,7 +213,6 @@ h1, h2, h3, h4, h5,
 }
 
 /* Style the checkmark/indicator */
-
 .checkbox-primary{
   color: $primary;
   input:checked ~ .checkmark:after {

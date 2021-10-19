@@ -1,12 +1,24 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/welcome']">UNIQTO</a>
+
+      <!-- Logo -->
+      <a class="navbar-brand" [routerLink]="['/welcome']">
+        <img src="./assets/images/uniqto-logo.svg" class="rounded" height="70px">
+      </a>
+
+      <!-- Bootstrap Toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <!-- Navbar links could be placed inside the ul -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
+
+        <!-- Search box -->
         <div class="search-container">
           <span class="d-flex">
             <div class="input-group">
@@ -17,7 +29,7 @@
         </div>
 
         
-        <!--wishlist-->
+        <!-- Wishlist Button -->
         <a class="nav-link" [routerLink]="['/wishlist']">
           <button class="btn btn-primary position-relative">
               <i class="bi bi-heart-fill"></i>
@@ -29,15 +41,18 @@
           </button>
         </a>
         
+        <!-- Cart Button -->
         <a class="nav-link" [routerLink]="['/cart']">
-            <button class="btn btn-primary position-relative">
-                <i class="bi bi-cart"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="cartCount != 0">
-                    {{cartCount}}
-                    <span class="visually-hidden">Quantity in Cart</span>
-                </span>
-            </button>
+          <button class="btn btn-primary position-relative">
+              <i class="bi bi-cart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="cartCount != 0">
+                  {{cartCount}}
+                  <span class="visually-hidden">Quantity in Cart</span>
+              </span>
+          </button>
         </a>
+
       </div>
+
     </div>
 </nav>
