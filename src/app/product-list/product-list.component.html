@@ -7,6 +7,7 @@
             <div class="category-bar d-flex">
                 <div class="item">
                     <a (click)="filter('WOMEN')">
+                        <!--<img src="./assets/images/<filename>">-->
                         <img src="https://cdn-icons.flaticon.com/png/512/2682/premium/2682144.png?token=exp=1634617508~hmac=64913ef6582bc23b673475e69b14059d">
                         <h6>WOMEN</h6>
                     </a>
@@ -62,7 +63,7 @@
                                 <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
                                     <h2 class="product-brand">{{product.productName}}</h2>
                                     <p class="product-rating">Rating ({{product.productReviews.length}})</p>
-                                    <span class="price">{{product.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</span>
+                                    <span class="price">{{product.productPrice | currency: 'PHP': 'symbol-narrow'}}</span>
                                 </a>
                             </div>
                         </div>
