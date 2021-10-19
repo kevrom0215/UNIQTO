@@ -5,16 +5,16 @@
 
 
 img {
-  width: 70%;
-  height: auto;
+  width: 100%;
+  
 }
 
 .carousel-control:hover { 
   border: none;
   opacity: 1;
 }
-.carousel-inner{
-  margin-left: 15%;
+.carousel-inner img{
+  margin: auto;
 }
   
   // =========================
@@ -22,3 +22,11 @@ img {
   // =========================
  
   /* style the arrows */
+.mainDiv{
+  margin: auto;
+  width: 75%;
+}
+.carousel{
+  justify-content: center;
+ 
+}
