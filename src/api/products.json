@@ -1,6 +1,7 @@
 [
 	{
 		"productID": 441647,
+		"productCategory": "MEN",
 		"productName": "Easy Care Comfort Striped Long Sleeve Shirt",
 		"productPrice": 1290,
 		"productImage": [
@@ -43,6 +44,7 @@
 	},
 	{
 		"productID": 441743,
+		"productCategory": "MEN",
 		"productName": "STRETCH SELVEDGE SLIM FIT JEANS",
 		"productPrice": 1990,
 		"productImage": [
@@ -87,6 +89,7 @@
 	},
 	{
 		"productID": 434613,
+		"productCategory": "KIDS",
 		"productName": "Kids Airism Cotton Blend Short Sleeve Set",
 		"productPrice": 790,
 		"productImage": [
@@ -118,6 +121,7 @@
 	},
 	{
 		"productID": 434148,
+		"productCategory": "KIDS",
 		"productName": "Kids Ultra Stretch Dry Sweat Hoodie",
 		"productPrice": 990,
 		"productImage": [
@@ -164,6 +168,7 @@
 	},
 	{
 		"productID": 429454,
+		"productCategory": "WOMEN",
 		"productName": "Women Ultra Light Down Parka",
 		"productPrice": 3990,
 		"productImage": [
@@ -197,6 +202,7 @@
 	},
 	{
 		"productID": 435193,
+		"productCategory": "WOMEN",
 		"productName": "WOMEN U CREW NECK SHORT SLEEVE T-SHIRT",
 		"productPrice": 590,
 		"productImage": [
@@ -256,6 +262,7 @@
 	},
 	{
 		"productID": 441799,
+		"productCategory": "WOMEN",
 		"productName": "JERSEY RELAXED JACKET",
 		"productPrice": 1490,
 		"productImage": [
@@ -311,6 +318,7 @@
 	},
 	{
 		"productID": 443620,
+		"productCategory": "MEN",
 		"productName": "WINDPROOF FLUFFY YARN FLEECE FULL-ZIP HOODIE",
 		"productPrice": 1990,
 		"productImage": [
@@ -359,13 +367,14 @@
 	},
 	{
 		"productID": 442314,
+		"productCategory": "MEN",
 		"productName": "CHINO SHORTS",
 		"productPrice": 990,
 		"productImage": [
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/item/phgoods_26_441246.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub1.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub2.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub6.jpg?width=1600&impolicy=quality_75"
+			"./assets/images/phgoods_441246_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_26_441246.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub6.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
 			"schemeName":[
@@ -375,10 +384,10 @@
 				"32 BEIGE"
 			],
 			"schemeLink":[
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_08_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_09_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_26_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_32_441246_chip.jpg"
+				"./assets/images/goods_08_441246_chip.jpg",
+				"./assets/images/goods_09_441246_chip.webp",
+				"./assets/images/goods_26_441246_chip.jpg",
+				"./assets/images/goods_32_441246_chip.jpg"
 			]	
 		}],
 		"productOverview": " Enjoy the unique texture of chinos. In a relaxed cut.",
@@ -393,13 +402,14 @@
 	},
 	{
 		"productID": 321345,
+		"productCategory": "",
 		"productName": "AIRISM MASK (3PACK)",
 		"productPrice": 490,
 		"productImage": [
-			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_03_437784.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub1.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub2.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_09_437784.jpg?width=1600&impolicy=quality_75"
+			"./assets/images/goods_03_437784.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_09_437784.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
 			"schemeName":[
@@ -408,9 +418,9 @@
 				"09 BLACK"
 			],
 			"schemeLink":[
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_00_437784_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_03_437784_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/chip/phgoods_09_437784_chip.jpg"				
+				"./assets/images/goods_00_437784_chip.webp",
+				"./assets/images/goods_03_437784_chip.webp",
+				"./assets/images/phgoods_09_437784_chip.webp"				
 			]	
 		}],
 		"productDescription": " High-performance filter keeps you dry from splashes. Washable AIRism mask. Evolved design to be easier to breath in. (NO RETURN/ NO EXCHANGE UNLESS DAMAGED OR DEFECTIVE)",
