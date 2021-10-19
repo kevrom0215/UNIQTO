@@ -143,6 +143,9 @@ hr {
 
 .checkout-button {
     width:100%;
+    &:hover{
+        color: white !important;
+    }
 }
 
 .checkout-section .checkout-button {
@@ -194,6 +197,11 @@ hr {
 
 .empty-message {
     margin-right:30px;
+}
+#removeallitems{
+    background-color: grey;
+    border:none !important;
+    outline: none !important;
 }
 
 
