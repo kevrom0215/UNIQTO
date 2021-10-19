@@ -356,5 +356,77 @@
 				"reviewDate": "9/11/2021"
 			}
 		]
+	},
+	{
+		"productID": 442314,
+		"productName": "CHINO SHORTS",
+		"productPrice": 990,
+		"productImage": [
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/item/phgoods_26_441246.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub1.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub2.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub6.jpg?width=1600&impolicy=quality_75"
+		],
+		"productScheme": [{
+			"schemeName":[
+				"08 DARK GRAY",
+				"09 BLACK",
+				"26 ORANGE",
+				"32 BEIGE"
+			],
+			"schemeLink":[
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_08_441246_chip.jpg",
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_09_441246_chip.jpg",
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_26_441246_chip.jpg",
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_32_441246_chip.jpg"
+			]	
+		}],
+		"productOverview": " Enjoy the unique texture of chinos. In a relaxed cut.",
+		"productDescription": "Finely brushed cotton twill fabric with a special dyeing and washing process for a distinctive texture. Comfortable and soft to the touch.Double-stitched on the sides for a more casual design. Generous cut from the thigh down to the hem, so they pair well with loose-fitting tops.Carefully designed details including a coin pocket and chambray piping inside the waist. Sleek knee-length cut.",
+		"productReviews": [{
+				"username": "Caplui",
+				"userRating": 4,
+				"userReview": "I'M QUITE SATISFIED WITH THIS ITEM WHICH IS SUITABLE FOR ME DURING THE SUMMER MONTHS WHILE WORKING ON BOARD SHIP",
+				"reviewDate": "9/9/2021"
+			}
+		]
+	},
+	{
+		"productID": 321345,
+		"productName": "AIRISM MASK (3PACK)",
+		"productPrice": 490,
+		"productImage": [
+			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_03_437784.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub1.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub2.jpg?width=1600&impolicy=quality_75",
+			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_09_437784.jpg?width=1600&impolicy=quality_75"
+		],
+		"productScheme": [{
+			"schemeName":[
+				"00 WHITE",
+				"03 GRAY",
+				"09 BLACK"
+			],
+			"schemeLink":[
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_00_437784_chip.jpg",
+				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_03_437784_chip.jpg",
+				"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/chip/phgoods_09_437784_chip.jpg"				
+			]	
+		}],
+		"productDescription": " High-performance filter keeps you dry from splashes. Washable AIRism mask. Evolved design to be easier to breath in. (NO RETURN/ NO EXCHANGE UNLESS DAMAGED OR DEFECTIVE)",
+		"productOverview": "High-performance 3-tier structure. First layer of AIRism Mesh is smooth and highly breathable. Second layer cuts up to 99 of particles such as bacteria and pollen. Third layer uses the same AIRism Mesh as the first layer for improved breathability.",
+		"productReviews": [{
+				"username": "AMYY",
+				"userRating": 5,
+				"userReview": "The quality is superb. Breathable and soft mask. Not harsh to the face, so not to aggravate maskne. Thanks uniqlo <3",
+				"reviewDate": "10/17/2021"
+			},
+			{
+				"username": "deanne",
+				"userRating": 5,
+				"userReview": "It has a great material. Breathable and it's soft against the skin. I have a sensitive skin and this does not irritate my skin so I love it. Will definitely buy it again after my masks become worked out. Thank you Uniqlo!",
+				"reviewDate": "10/13/2021"
+			}
+		]
 	}
 ]
