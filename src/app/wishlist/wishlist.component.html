@@ -21,26 +21,19 @@
                         <table class="table">
                         <thead class="thead-primary">
                             <tr>
-                                <th>Color</th>
-                                <th>Image</th>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Product ID</th>
-                                <th>Action</th>
+                                <th>IMAGE</th>
+                                <th>PRODUCT</th>
+                                <th>PRICE</th>
+                                <th>ID #</th>
+                                <th>ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="alert" role="alert" *ngFor="let product of products">
-                                <td width=10%>
-                                    <label class="checkbox-wrap checkbox-primary">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </td>
                                 <td width=30%>
                                     <img class="product-img" src="{{product.productImage[0]}}" />
                                 </td>
-                                <td width=30%>
+                                <td width=40%>
                                     <div class="email">
                                         <span style="text-transform: bold;">{{product.productName}} </span>
                                         <span>{{product.productOverview}}</span>
@@ -49,8 +42,10 @@
                                 <td width=10%><strong>{{product.productPrice | currency: 'PHP' : 'symbol-narrow'}}</strong></td>
                                 <td width=10%>{{product.productID}}</td>
                                 <td width=10%>
-                                    <button class="btn btn-danger" routerLink="/cart"><i class="bi bi-cart"></i></button>
-                                    <button class="btn btn-danger" (click)="removeItem(product)"><i class="fas fa-trash-alt"></i></button>
+                                    <div class="wishlist-btn">
+                                        <button class="btn btn-danger" (click) = addToCart()><i class="bi bi-cart"></i></button>
+                                        <button class="btn btn-danger" (click)="removeItem(product)"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
