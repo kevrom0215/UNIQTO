@@ -28,6 +28,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   public colorToChoose : string = "";
   public sizeToChoose : string = "";
   public canFinallyAdd : boolean = false;
+  // for search by category
+  public filterCategory: any;
 
 
   // Used to unsubscribe on page exit
@@ -40,6 +42,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       .subscribe(res=>{
         this.productListRaw = res;
         this.productList = this.productListRaw;
+        this.filterCategory = this.productListRaw;
       
         // Subscribe to the route.params for filtering
         this.route.params.subscribe(params => {
@@ -86,5 +89,14 @@ export class ProductListComponent implements OnInit, OnDestroy {
     if(this.colorToChoose !== ""){
       this.canFinallyAdd = true;
     }
+  }
+
+  filter(category: string){
+    this.filterCategory = this.productList
+    .filter((a: any) => {
+      if (a.productCategory == category || category =='') {
+        return a;
+      }
+    })
   }
 }

@@ -174,3 +174,36 @@ import {box-sizing: border-box;}
       color:black;
   }
 
+  .category{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background: #fff;
+      background-clip: border-box;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 0.25rem;
+      align-items: center;
+      
+      &:hover {
+        cursor: pointer;
+    }
+  }
+
+
+  .item img {
+      width: 64px;
+      padding: 10px;
+  }
+
+  .item{
+      margin: 10px 15px;
+      text-align: center;
+
+      h6:hover{
+        color: red;
+        border-bottom: 3px solid red;
+        transition: filter 0.4s ease-in-out;
+      }
+  }

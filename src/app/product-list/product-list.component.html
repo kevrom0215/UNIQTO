@@ -1,5 +1,30 @@
     <ng-container *ngIf="searchTerm==''; else customHeader">
+        <!-- CAROUSEL DISPLAY | COMPONENT -->
         <app-carousel></app-carousel> 
+        <!-- FILTER PRODUCTS BY CATEGORY -->
+        <div class="category">
+            <div class="category-bar d-flex">
+                <div class="item">
+                    <a (click)="filter('WOMEN')">
+                        <img src="https://cdn-icons.flaticon.com/png/512/2682/premium/2682144.png?token=exp=1634617508~hmac=64913ef6582bc23b673475e69b14059d">
+                        <h6>WOMEN</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a (click)="filter('MEN')">                    
+                        <img src="https://cdn3.iconfinder.com/data/icons/men-s-clothing-3-line/64/male_clothes-12-512.png">
+                        <h6>MEN</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a (click)="filter('KIDS')">  
+                        <img src="https://cdn4.iconfinder.com/data/icons/web-and-devices-set-1/512/Baby__Child_2-512.png">
+                        <h6>KIDS</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
         <div class = "displayarea"> 
             <h1>ALL PRODUCTS</h1>
         </div>
@@ -10,9 +35,10 @@
         </div>
     </ng-template>
 
+
 <!-- PRODUCT CARDS -->
 <div class="product-container">
-    <ng-container *ngFor = "let product of productList">
+    <ng-container *ngFor = "let product of filterCategory">
     <div class="product-card">
         <div class="product-image">
             <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
