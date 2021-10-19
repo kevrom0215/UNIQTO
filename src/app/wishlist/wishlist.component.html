@@ -43,7 +43,7 @@
                                 <td width=10%>{{product.productID}}</td>
                                 <td width=10%>
                                     <div class="wishlist-btn">
-                                        <button class="btn buttonprmy" (click) = addToCart()><i class="bi bi-cart"></i></button>
+                                        <button class="btn buttonprmy" (click) = addToCart(product)><i class="bi bi-cart"></i></button>
                                         <button class="btn buttoncontinue" (click)="removeItem(product)"><i class="fas fa-trash-alt"></i></button>
                                     </div>
                                 </td>
@@ -55,8 +55,10 @@
             </div>
         </div>
     </section>
-    <button class="btn isred" (click)="emptyWishlist()">Empty Wishlist</button>
-    <button class="btn buttoncontinue" routerLink="/welcome">Continue Shopping</button>
+    <div class="wishlist-btn">
+        <button class="btn isred" (click)="emptyWishlist()">Empty Wishlist</button>
+        <button class="btn buttoncontinue" routerLink="/welcome">Continue Shopping</button>
+    </div>
 </ng-container>
 
 <!--WHEN WISHLIST IS EMPTY-->

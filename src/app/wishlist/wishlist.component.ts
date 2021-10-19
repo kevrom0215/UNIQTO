@@ -14,7 +14,6 @@ export class WishlistComponent implements OnInit {
   public products : any=[];
 
   //from prod details
-  public product: any = {};
   public prodToKeep: any = {};
   public averageRating : number = 0;
   public photoToChoose : string = "";
@@ -44,18 +43,9 @@ export class WishlistComponent implements OnInit {
     this.wishlistService.removeAll();
   }
 
-  addToCart(){
-    let myCustomObject : object = {
-      productID: this.product.productID,
-      productName: this.product.productName,
-      productPrice: this.product.productPrice,
-      chosenColor: this.colorToChoose,
-      chosenSize: this.sizeToChoose,
-      chosenPhoto: this.photoToChoose,
-    };
-    this.cartService.addtoCart(myCustomObject);
-    // this.successfulAdditon = false;
-    // alert("Item added to cart");
+  addToCart(item: any){
+    this.cartService.addtoCart(item);
+    console.log(item);
   }
 
 }

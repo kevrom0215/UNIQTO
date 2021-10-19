@@ -37,5 +37,7 @@ export class WishlistService {
     this.wishlistItemList = []
     this.productList.next(this.wishlistItemList);
   }
+
+  
 }
 
