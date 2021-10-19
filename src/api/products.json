@@ -362,10 +362,10 @@
 		"productName": "CHINO SHORTS",
 		"productPrice": 990,
 		"productImage": [
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/item/phgoods_26_441246.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub1.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub2.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/441246/sub/phgoods_441246_sub6.jpg?width=1600&impolicy=quality_75"
+			"./assets/images/phgoods_441246_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_26_441246.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_441246_sub6.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
 			"schemeName":[
@@ -375,10 +375,10 @@
 				"32 BEIGE"
 			],
 			"schemeLink":[
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_08_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_09_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_26_441246_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441246/chip/goods_32_441246_chip.jpg"
+				"./assets/images/goods_08_441246_chip.jpg",
+				"./assets/images/goods_09_441246_chip.webp",
+				"./assets/images/goods_26_441246_chip.jpg",
+				"./assets/images/goods_32_441246_chip.jpg"
 			]	
 		}],
 		"productOverview": " Enjoy the unique texture of chinos. In a relaxed cut.",
@@ -396,10 +396,10 @@
 		"productName": "AIRISM MASK (3PACK)",
 		"productPrice": 490,
 		"productImage": [
-			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_03_437784.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub1.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/sub/phgoods_437784_sub2.jpg?width=1600&impolicy=quality_75",
-			"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/item/goods_09_437784.jpg?width=1600&impolicy=quality_75"
+			"./assets/images/goods_03_437784.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub1.webp?width=1600&impolicy=quality_75",
+			"./assets/images/phgoods_437784_sub2.webp?width=1600&impolicy=quality_75",
+			"./assets/images/goods_09_437784.webp?width=1600&impolicy=quality_75"
 		],
 		"productScheme": [{
 			"schemeName":[
@@ -408,9 +408,9 @@
 				"09 BLACK"
 			],
 			"schemeLink":[
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_00_437784_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/437784/chip/goods_03_437784_chip.jpg",
-				"https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/437784/chip/phgoods_09_437784_chip.jpg"				
+				"./assets/images/goods_00_437784_chip.webp",
+				"./assets/images/goods_03_437784_chip.webp",
+				"./assets/images/phgoods_09_437784_chip.webp"				
 			]	
 		}],
 		"productDescription": " High-performance filter keeps you dry from splashes. Washable AIRism mask. Evolved design to be easier to breath in. (NO RETURN/ NO EXCHANGE UNLESS DAMAGED OR DEFECTIVE)",

@@ -15,7 +15,6 @@
     <ng-container *ngFor = "let product of productList">
     <div class="product-card">
         <div class="product-image">
-            <span class="discount-tag">30% off</span>
             <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
                 <img src={{product.productImage}} class="product-thumb" alt="">
             </a>
