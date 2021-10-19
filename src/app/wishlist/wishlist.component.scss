@@ -3,7 +3,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 $font-primary: 'Poppins',Arial, sans-serif;
-$primary: pink;
+$primary: red;
 //$color: black;
 body{
 	font-family: $font-primary;
@@ -76,13 +76,15 @@ h1, h2, h3, h4, h5,
 		}
 		th{
 			border: none;
-			padding: 30px;
-			font-size: 13px;
+			padding: 20px;
+			font-size: 20px;
 			font-weight: 500;
 			color: white;
+			text-align: center;
 		}
-		//tr{
-		//}
+		tr{
+			font-size: 20px;
+		}
 	}
 	tbody{
 		tr{
@@ -112,6 +114,12 @@ h1, h2, h3, h4, h5,
 					}
 				}
 			}
+			.wishlist-btn{
+				//align-items: center;
+				margin-left: auto;
+				margin-right: auto
+			}
+
 			.close{
 				span{
 					font-size: 12px;
@@ -119,11 +127,16 @@ h1, h2, h3, h4, h5,
 				}
 			}
             .btn.btn-danger{
-                padding: 10px;
+                margin: 10px;
             }
         
 		}
 	}
+}
+
+.btn.btn-danger{
+	margin: 10px;
+	align-items: center;
 }
 
 
