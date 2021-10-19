@@ -134,59 +134,6 @@
         </div>
     </div>
 
-    <!-- PRODUCT CARDS -->
-    <!-- <div class="product-container">
-        <div class="container">
-            <div class="row"> -->
-                <!-- <ng-container *ngFor = "let product of productList"> -->
-                    <!-- <div class="product-card">
-                        <div class="product-image">
-                            <span class="discount-tag">30% off</span>
-                            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-                                <img src={{product.productImage}} class="product-thumb" alt="">
-                            </a> -->
-                            
-                            <!-- for wishlist -->
-                            <!-- <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist(product) [disabled]="!canFinallyAdd" value="Add to Wishlist" />
-                            
-                        </div>
-                        
-                        <div class="product-info">
-                            <div class="color-option">
-                                <span class="color"></span>
-                                <div class="circles">
-                                    <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
-                                        <div class="color-seperator">
-                                            <input class="button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-                                <h2 class="product-brand">{{product.productName}}</h2>
-                                <p class="product-rating">Rating ({{product.productReviews.length}})</p>
-                                <span class="price">{{product.productPrice | currency: 'PHP' : 'symbol-narrow'}}</span>
-                            </a>
-                        </div>
-                    </div>
-                 -->
-                    <!--test button-->
-                   
-                    <!-- modal for wishlist -->
-                    <!-- <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Item has been added to your wishlist!</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/wishlist">View Wishlist</button>
-                                  </div>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- </ng-container> -->
-            <!-- </div>
-        </div>
-    </div> -->
+ <div class="conditional-spacer" *ngIf="searchTerm!==''; else customHeader">
+
+ </div>

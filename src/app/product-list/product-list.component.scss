@@ -221,6 +221,7 @@
       background: #fff;
       background-clip: border-box;
       border: 1px solid rgba(0,0,0,0.2);
+      border-top: none;
       border-radius: 0.25rem;
       align-items: center;
       
@@ -263,4 +264,8 @@
     opacity: 0;
     position: fixed;
     width: 0;
+}
+
+.conditional-spacer{
+    height:100px;
 }
