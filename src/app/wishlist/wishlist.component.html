@@ -1,6 +1,6 @@
 <!--sample-->
 <head>
-    <title>Table 06</title>
+    <title>Wishlist Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -61,16 +61,19 @@
         </div>
     </section>
     <button class="btn btn-danger" (click)="emptyWishlist()">Empty Wishlist</button>
+    <button class="btn btn-danger" routerLink="/welcome">Continue Shopping</button>
 </ng-container>
 
-
+<!--WHEN WISHLIST IS EMPTY-->
 <ng-container *ngIf="products.length==0">
-    <div class="container">
-        <div class="center">
-            <img src="https://www.100nairamarket.com/images/empty-whishlist-icon.png">
-            <h4>Your wishlist is empty!</h4>
-            <h6>Browse our products now</h6>
-            <button class="btn btn-primary">Shop Now</button>
+    <div class="footer-height">
+        <div class="empty-container">
+            <div class="center">
+                <img src="https://www.100nairamarket.com/images/empty-whishlist-icon.png">
+                <h4>Your wishlist is empty!</h4>
+                <!-- <h6>Browse our products now</h6> -->
+                <button class="btn btn-primary" routerLink="/welcome">Shop Now</button>
+            </div>
         </div>
     </div>
 </ng-container>
