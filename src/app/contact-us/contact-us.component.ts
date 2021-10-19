@@ -7,7 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-  // Create our form
+  
+  // Create the form using FormBuilder
   myForm = this.myFormBuilder.group({
     fullName: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -15,14 +16,14 @@ export class ContactUsComponent implements OnInit {
     message: ['', Validators.required]
   });
 
-
-  // Inject FormBuilder
+  // Inject FormBuilder into this component
   constructor(private myFormBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
-  // Getters
+  // Getters: fullname, email, phoneNumber, message //
+
   get fullName() {
     return this.myForm.get('fullName');
   }
