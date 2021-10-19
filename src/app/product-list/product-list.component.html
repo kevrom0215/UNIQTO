@@ -29,55 +29,96 @@
         <div class = "displayarea"> 
             <h1><strong>ALL PRODUCTS</strong></h1>
         </div>
-        
-    </ng-container>
-    <ng-template #customHeader>
-        <div class = "displayarea">
-            <h1><strong>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</strong></h1>
-        </div>
-    </ng-template>
 
-    <!-- edited -->
-    <div class="container product-list">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 box" *ngFor = "let product of filterCategory">
-                <div class="product-card">
-                    <div class="product-image">
-                        <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-                            <img src={{product.productImage}} class="product-thumb" alt="">
-                        </a>
-                        <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist(product) [disabled]="!canFinallyAdd" value="Add to Wishlist" />
-                    </div>
-                    <div class="product-info">
-                        <div class="color-option">
-                            <span class="color"></span>
-                            <div class="circles">
-                                <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
-                                    <div class="color-seperator">
-                                        <input class="disappear" type="radio" id="{{colors}}" name="radioFruit" value="apple">
-                                        <label class="new-box" for="{{colors}}" style="background: url({{colors}}) left center no-repeat" (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))"></label>
+        <!-- edited -->
+        <div class="container product-list">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 box" *ngFor = "let product of filterCategory">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                                <img src={{product.productImage}} class="product-thumb" alt="">
+                            </a>
+                            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist(product) [disabled]="!canFinallyAdd" value="Add to Wishlist" />
+                        </div>
+                        <div class="product-info">
+                            <div class="color-option">
+                                <span class="color"></span>
+                                <div class="circles">
+                                    <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
+                                        <div class="color-seperator">
+                                            <input class="disappear" type="radio" id="{{colors}}" name="radioFruit" value="apple">
+                                            <label class="new-box" for="{{colors}}" style="background: url({{colors}}) left center no-repeat" (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))"></label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="deets">
-                                <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
-                                    <div>
-                                        <h2 class="product-brand">{{product.productName}}</h2>
-                                    </div>
-                                    <div>
-                                        <p class="product-rating isred">Rating ({{product.productReviews.length}})</p>
-                                    </div>
-                                    <div>
-                                        <span class="price">{{product.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</span>
-                                    </div>
-                                </a>
+                                <div class="deets">
+                                    <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                                        <div>
+                                            <h2 class="product-brand">{{product.productName}}</h2>
+                                        </div>
+                                        <div>
+                                            <p class="product-rating isred">Rating ({{product.productReviews.length}})</p>
+                                        </div>
+                                        <div>
+                                            <span class="price">{{product.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+    </ng-container>
+    <ng-template #customHeader>
+        <div class = "displayarea">
+            <h1><strong>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</strong></h1>
+        </div>
+
+        <div class="container product-list">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 box" *ngFor = "let product of productList">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                                <img src={{product.productImage}} class="product-thumb" alt="">
+                            </a>
+                            <input type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4" (click) = addToWishlist(product) [disabled]="!canFinallyAdd" value="Add to Wishlist" />
+                        </div>
+                        <div class="product-info">
+                            <div class="color-option">
+                                <span class="color"></span>
+                                <div class="circles">
+                                    <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
+                                        <div class="color-seperator">
+                                            <input class="disappear" type="radio" id="{{colors}}" name="radioFruit" value="apple">
+                                            <label class="new-box" for="{{colors}}" style="background: url({{colors}}) left center no-repeat" (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deets">
+                                    <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
+                                        <div>
+                                            <h2 class="product-brand">{{product.productName}}</h2>
+                                        </div>
+                                        <div>
+                                            <p class="product-rating isred">Rating ({{product.productReviews.length}})</p>
+                                        </div>
+                                        <div>
+                                            <span class="price">{{product.productPrice | currency:"PHP ":"symbol":"1.2-2"}}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
 
     <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
         <div class="modal-dialog">
