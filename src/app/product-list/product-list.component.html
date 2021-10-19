@@ -28,7 +28,8 @@
                 <div class="circles">
                     <div class="button-color-container" *ngFor="let colors of product.productScheme[0].schemeLink">
                         <div class="color-seperator">
-                            <input class="button-color" type="image" src={{colors}} (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))">
+                            <input class="disappear" type="radio" id="{{colors}}" name="radioFruit" value="apple">
+                            <label class="new-box" for="{{colors}}" style="background: url({{colors}}) left center no-repeat" (click)="textureAssign(product,product.productScheme[0].schemeLink.indexOf(colors))"></label>
                         </div>
                     </div>
                 </div>
