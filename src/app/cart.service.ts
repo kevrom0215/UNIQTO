@@ -47,10 +47,15 @@ export class CartService {
     // })
     for(let i=0 ; i<this.cartItemList.length ; i++){
       if(product.productID === this.cartItemList[i].productID){
-        console.log(product.productID, " is equal to ", this.cartItemList[i].productID);
-        console.log(this.cartItemList);
-        console.log(i);
-        this.cartItemList.splice(i,1)
+        if(product.chosenColor == this.cartItemList[i].chosenColor){
+          if(product.chosenSize == this.cartItemList[i].chosenSize){
+            console.log(this.cartItemList[i]);
+            console.log(product);
+            console.log(i);
+            this.cartItemList.splice(i,1);
+            break;
+          }
+        }
       }
     }
     this.productList.next(this.cartItemList);

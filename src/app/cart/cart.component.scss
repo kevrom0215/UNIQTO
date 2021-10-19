@@ -20,7 +20,7 @@ hr {
     padding-top: 3rem;
     // padding-bottom: 1rem;
     margin: auto;
-    width: 65%
+    width: 68.5%;
 }
 
 .title h1 {
@@ -171,6 +171,7 @@ hr {
 }
 
 .empty{
+    
     padding-left: 0;
     padding-right: 10;
     margin-left: 10px;
@@ -187,5 +188,11 @@ hr {
     margin-left:1rem;
 }
 
+.container-fluid {
+    padding-left:7px;
+}
 
+.empty-message {
+    margin-right:30px;
+}
 
