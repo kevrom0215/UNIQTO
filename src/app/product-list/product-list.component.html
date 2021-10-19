@@ -1,13 +1,14 @@
-<app-carousel></app-carousel> 
-
-<div class = "displayarea">
-    <ng-container *ngIf="searchTerm==''; else customHeader">    
-        <h1>ALL PRODUCTS</h1>
+    <ng-container *ngIf="searchTerm==''; else customHeader">
+        <app-carousel></app-carousel> 
+        <div class = "displayarea"> 
+            <h1>ALL PRODUCTS</h1>
+        </div>
     </ng-container>
     <ng-template #customHeader>
-        <h1>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</h1>
+        <div class = "displayarea">
+            <h1>{{productList.length + " " + ((productList.length > 1) ? "matches":"match") + ' for ' + '"' + searchTerm + '"'}}</h1>
+        </div>
     </ng-template>
-</div>
 
 <!-- PRODUCT CARDS -->
 <div class="product-container">
