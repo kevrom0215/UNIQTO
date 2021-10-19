@@ -5,12 +5,42 @@
 
 .btn {
     background-color: #f57070 !important;
-    border: solid gray;
+    // border: solid gray;
+    border: none;
+    outline: none;
+    color: white;
 }
 
 a{
     font-size: 40px;
 }
 text{
-    color: black;
+    color: white;
+}
+
+.d-flex {
+    margin:16px, 16px;
+}
+
+.search-container {
+    width: 300px;
+    margin-right:22px;
+    margin-left:22px;
+    margin-top:7px;
+    // margin-bottom:30px;
+}
+
+.btn:focus,.btn:active, input:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+ textarea:focus, input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.input-group-text {
+    background-color: white;
 }
