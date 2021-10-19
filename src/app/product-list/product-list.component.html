@@ -39,7 +39,7 @@
     <!-- edited -->
     <div class="container product-list">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 box" *ngFor = "let product of productList">
+            <div class="col-lg-3 col-md-4 col-sm-6 box" *ngFor = "let product of filterCategory">
                 <div class="product-card">
                     <div class="product-image">
                         <a routerLink='/product-details/{{product.productName}}' (click)="revealProduct(product)">
