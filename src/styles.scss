@@ -17,7 +17,7 @@ button:hover{
     outline: none !important;
 }
 .wishlist{
-    background-color: #FF6B6B;
+    background-color: white;
     color: white;
 }
 .buttonprmy{
@@ -26,6 +26,12 @@ button:hover{
 
 }
 .buttoncontinue{
-    background-color: #012443;
+    background-color: #012443 !important;
     color: white !important;
+}
+.isred{
+    color: #FF0000;
+}
+.isplain{
+    font-family: Arial, Helvetica, sans-serif;
 }

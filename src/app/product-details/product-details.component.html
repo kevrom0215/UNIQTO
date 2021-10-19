@@ -27,12 +27,12 @@
     </div>
     <div class = "id_and_reviews">
       <div class = "product_description">
-        <div id="id">
-          <h2>Product ID: {{product.productID}}</h2>
+        <div id = "id">
+          <h2 class="id">Product ID: {{product.productID}}</h2>
         </div>
         <div class = "product_overview">
-          <div id = "productoverview">
-            <h2>Product Overview</h2>
+          <div>
+            <h2  id = "productoverview">Product Overview</h2>
           </div>
           <div>
             <p>
@@ -43,7 +43,7 @@
       </div>
       <div class = "product_reviews">
         <div class = "review_title_container">
-          <h2>Reviews ({{product.productReviews.length}})</h2><!--product.review.length-->
+          <h2 class="id">Reviews ({{product.productReviews.length}})</h2><!--product.review.length-->
         </div>
         <!-----user reviews-->
         <ng-container *ngFor = "let review of product.productReviews">
@@ -95,7 +95,9 @@
         <div class="rating-display">
           <span><h2 class = "actual-rating">({{averageRating | number:"1.1-1"}})</h2></span>
         </div>
-        <app-star [rating]="averageRating"></app-star>
+        <div id="stars">
+          <app-star [rating]="averageRating"></app-star>
+        </div>        
       </div>  
       <div id="product_description">
         <p>
